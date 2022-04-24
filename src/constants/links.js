@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     id: 1,
     text: "Home",
@@ -27,19 +27,19 @@ const data = [
   },
 ];
 
-const pageLinks = data.map((link) => {
-  return (
-    <li key={link.id}>
-      <a
-        href={`${link.url}`}
-        className="flex py-2 text-base font-medium text-white hover:text-primary lg:ml-12 lg:inline-flex"
-      >
-        {link.text}
-      </a>
-    </li>
-  );
-});
+// const pageLinks = data.map((link) => {
+//   return (
+//     <li key={link.id}>
+//       <a
+//         href={`${link.url}`}
+//         className="flex py-2 text-base font-medium text-white hover:text-primary lg:ml-12 lg:inline-flex"
+//       >
+//         {link.text}
+//       </a>
+//     </li>
+//   );
+// });
 
-export default () => {
-  return <ul className="blcok lg:flex">{pageLinks}</ul>;
-};
+// export default () => {
+//   return <ul className="blcok lg:flex">{pageLinks}</ul>;
+// };

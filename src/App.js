@@ -1,11 +1,13 @@
 import { Navbar } from "./components";
-import { Hero } from "./container";
+import { Features, Hero, VidSection } from "./container";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Hero />
+      <Features />
+      <VidSection />
     </div>
   );
 }
