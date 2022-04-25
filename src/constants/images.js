@@ -13,12 +13,26 @@ import b2 from "../images/brands/2.svg";
 import b3 from "../images/brands/3.svg";
 import b4 from "../images/brands/4.svg";
 import b5 from "../images/brands/5.svg";
+import shape from "../images/svg/shape.svg";
+import vidPic from "../images/video/video.jpg";
+import play from "../images/video/play.svg";
+import video from "../images/video/1.mp4";
+import ab1 from "../images/about/about-image.svg";
+import ab2 from "../images/about/about-image-2.svg";
+import mark from "../images/about/mark.svg";
+import star from "../images/svg/star.svg";
+import testi1 from "../images/testimonials/1.png";
+import testi2 from "../images/testimonials/2.png";
+import testi3 from "../images/testimonials/3.png";
+import testibg from "../images/svg/testibg.svg";
 
 export default {
   logo,
   logoWhite,
   svgexport3,
   svgexport4,
+  ab1,
+  ab2,
   b1,
   b2,
   b3,
@@ -30,4 +44,14 @@ export default {
   f4,
   f5,
   f6,
+  testibg,
+  testi1,
+  testi2,
+  testi3,
+  mark,
+  star,
+  shape,
+  vidPic,
+  play,
+  video,
 };

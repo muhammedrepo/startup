@@ -1,69 +1,59 @@
 import React from "react";
 import { SectionTitle } from "../../components";
+import { images } from "../../constants";
 import { brandImage } from "../../constants/brandImage";
 
 const VidSection = () => {
   return (
     <>
-      <section className="ad a1H aq[120px]">
+      <section className="relative z-10 py-[120px]">
         <div className="container mx-auto px-4">
           <SectionTitle
             title="We are ready to help"
             desc="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           />
-          <div className="a8 a1K ab[-16px]">
-            <div className="a7 ae">
+          <div className="flex flex-wrap -mx-4 bg-[rgba(74,108,247,0.01)]">
+            <div className="w-full px-4">
               <div
                 className="
-                a1L aB[770px] a13 a2p
-                wow
-                fadeInUp
-              "
-                data-wow-delay=".15s"
+                mx-auto max-w-[770px] overflow-hidden rounded-md"
               >
-                <div className="ad a9 a1x">
+                <div className="relative items-center justify-center">
                   <img
-                    src="images/video/video.jpg"
-                    alt="video image"
-                    className="a7 a2Q a2R a2S"
+                    src={images.vidPic}
+                    alt="videoPic"
+                    className="w-full h-full object-cover object-center"
                   />
                   <div
                     className="
-                    a3
-                    a7
-                    a2Q
-                    a4
-                    a_
-                    a8
-                    a9
-                    a1x
+                    absolute
+                    w-full
+                    h-full
+                    top-0
+                    right-0
+                    flex
+                    items-center
+                    justify-center
                   "
                   >
                     <a
-                      href="javascript:void(0)"
+                      href={`${images.video}`}
                       className="
                       glightbox
-                      as[70px]
-                      at[70px]
-                      a1w
-                      a8
-                      a9
-                      a1x
-                      aw
-                      a3J
-                      a1W
+                      w-[70px]
+                      h-[70px]
+                      rounded-full
+                      flex
+                      items-center
+                      justify-center
+                      opacity-100 bg-[rgba(255,255,255,.75)]
+                      z-50
+                      text-[rgba(74,108,247,1)]
                       hover:a31
-                      a1p
+                      transition-all
                     "
                     >
-                      <svg
-                        width="16"
-                        height="18"
-                        viewBox="0 0 16 18"
-                        className="a26"
-                      >
-                        <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                      </svg>
+                      <img src={images.play} alt="" />
                     </a>
                   </div>
                 </div>
@@ -71,8 +61,8 @@ const VidSection = () => {
             </div>
           </div>
         </div>
-        <div className="a3 a1X a5 a_ a1Y[-1]">
-          <img src="images/video/shape.svg" alt="shape" className="a7" />
+        <div className="absolute bottom-0 left-0 right-0 -z-10">
+          <img src={images.shape} alt="shape" className="w-full" />
         </div>
       </section>
       <section className="a3K">
@@ -110,14 +100,16 @@ const VidSection = () => {
                   2xl:max-w-[160px]
                   mx-3
                   sm:mb-3
-                  xl:border-[rgba(74,108,2470.1)]
-                  2xl:aO
-                  aq[15px] a3Q
-                  hover:a3R
-                  aJ
-                  hover:a17
-                  dark:a3S dark:hover:a17
-                  a1p
+                  opacity-100
+                  xl:border-[rgba(74,108,247,.1)]
+                  2xl:opacity-60
+                  py-[15px] grayscale
+                  hover:grayscale-0
+                  opacity-70
+                  hover:opacity-10                  
+                  dark:opacity-60 dark:hover:opacity-100
+                  transition duration-150
+                  
                 "
                   >
                     <img src={brand.img} alt="" />

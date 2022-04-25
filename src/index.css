@@ -2,11 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-[rgba(9,14,52,1)];
+@layer base {
+  body {
+    @apply bg-[rgba(9,14,52,1)];
+  }
 }
 
-.navbarTogglerActive > span:nth-child(1) {
+@layer utilities {
+  .mark-svg {
+    @apply w-[30px]
+    h-[30px]
+    flex
+    items-center
+    justify-center
+    rounded-md
+    flex-wrap
+    bg-opacity-100	
+    text-opacity-100
+text-[rgba(74,108,247,var(--tw-text-opacity))]
+    mr-4;
+  }
+
+  .about-lists {
+    @apply flex
+    items-center
+    text-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))]
+    text-lg
+    font-medium
+    mb-5;
+  }
+  .about-list-b {
+    @apply font-bold 
+    dark:text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
+    text-xl
+    sm:text-2xl
+    lg:text-xl
+    xl:text-2xl
+    mb-4;
+  }
+
+  .about-list-p {
+    @apply text-opacity-100
+    text-[rgba(149,156,177,var(--tw-text-opacity))] text-base
+                    sm:text-lg
+                    leading-5
+                    sm:leading-5
+                    font-medium;
+  }
+}
+
+/* .navbarTogglerActive > span:nth-child(1) {
   top: 7px;
   transform: rotate(45deg);
 }
@@ -33,4 +78,4 @@ body {
     -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
+} */

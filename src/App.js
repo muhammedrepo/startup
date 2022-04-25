@@ -1,5 +1,5 @@
 import { Navbar } from "./components";
-import { Features, Hero, VidSection } from "./container";
+import { About, Features, Hero, Testimonials, VidSection } from "./container";
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
       <Hero />
       <Features />
       <VidSection />
+      <About />
+      <Testimonials />
     </div>
   );
 }
