@@ -1,5 +1,12 @@
 import { Navbar } from "./components";
-import { About, Features, Hero, Testimonials, VidSection } from "./container";
+import {
+  About,
+  Features,
+  Hero,
+  Pricing,
+  Testimonials,
+  VidSection,
+} from "./container";
 
 function App() {
   return (
@@ -10,6 +17,7 @@ function App() {
       <VidSection />
       <About />
       <Testimonials />
+      <Pricing />
     </div>
   );
 }
