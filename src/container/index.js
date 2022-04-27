@@ -4,3 +4,5 @@ export { default as VidSection } from "./VidSection/VidSection";
 export { default as About } from "./About/About";
 export { default as Testimonials } from "./Testimonials/Testimonials";
 export { default as Pricing } from "./Pricing/Pricing";
+export { default as Blog } from "./Blog/Blog";
+export { default as Support } from "./Support/Support";

@@ -1,9 +1,12 @@
 import { Navbar } from "./components";
+import { Footer } from "./components";
 import {
   About,
+  Blog,
   Features,
   Hero,
   Pricing,
+  Support,
   Testimonials,
   VidSection,
 } from "./container";
@@ -18,6 +21,9 @@ function App() {
       <About />
       <Testimonials />
       <Pricing />
+      <Blog />
+      <Support />
+      <Footer />
     </div>
   );
 }

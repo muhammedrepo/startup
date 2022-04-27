@@ -25,24 +25,33 @@ const Navbar = () => {
           <div className="flex w-full items-center justify-between px-4">
             <div>
               <button
-                className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                className="absolute right-4 top-1/2 block transform -translate-y-1/2 rounded-lg px-3 py-[6px] ring-[rgba(74, 108, 247, var(--tw-ring-opacity))] lg:hidden"
                 onClick={() => {
                   setShowLinks(!showLinks);
                 }}
               >
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
+                <span
+                  className="relative my-[6px] block h-[2px] w-[30px] bg-opacity-100
+    bg-[rgba(255,255,255,var(--tw-bg-opacity))]"
+                ></span>
+                <span
+                  className="relative my-[6px] block h-[2px] w-[30px] bg-opacity-100
+    bg-[rgba(255,255,255,var(--tw-bg-opacity))]"
+                ></span>
+                <span
+                  className="relative my-[6px] block h-[2px] w-[30px] bg-opacity-100
+    bg-[rgba(255,255,255,var(--tw-bg-opacity))]"
+                ></span>
               </button>
               <Nav ref={linksContainerRef}>
                 <ul className="block lg:flex" ref={linksRef}>
                   {data.map((link) => {
                     const { id, url, text } = link;
                     return (
-                      <li key={id}>
+                      <li key={id} className="relative">
                         <a
                           href={`${url}`}
-                          className="flex py-2 text-base font-medium text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                          className="flex py-2 text-base font-medium text-opacity-100 text-[rgba(255,255,255,var(--tw-bg-opacity))] hover:text-primary lg:ml-8 lg:inline-flex lg:mr-0 lg:py-3 lg:px-0 xl:ml-12"
                         >
                           {text}
                         </a>
@@ -52,15 +61,37 @@ const Navbar = () => {
                 </ul>
               </Nav>
             </div>
-            <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
+            <div className="flex items-center justify-end pr-16 lg:pr-0">
               <a
                 href="#login"
-                className="py-3 px-7 text-base font-medium text-white hover:text-primary"
+                className="hidden py-3 px-7 text-base font-bold dark:text-opacity-100
+    dark:text-[rgba(255,255,255,var(--tw-text-opacity))] hover:text-primary md:block"
               >
-                Login
+                Sign In
               </a>
 
-              <Button title="Sign Up" />
+              <a
+                href="signup.html"
+                class="
+                  hidden
+                  md:block
+                  text-base
+                  font-bold
+                  text-opacity-100
+    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                  bg-opacity-100
+  bg-[rgba(74,108,247,var(--tw-bg-opacity))]
+                  py-3
+                  px-8
+                  md:px-9
+                  lg:px-6
+                  xl:px9
+                  hover:shadow hover:bg-opacity-90
+                  rounded-md transition a1q duration-300
+                "
+              >
+                Sign Up
+              </a>
             </div>
           </div>
         </div>

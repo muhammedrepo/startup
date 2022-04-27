@@ -12,7 +12,7 @@ const VidSection = () => {
             title="We are ready to help"
             desc="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
           />
-          <div className="flex flex-wrap -mx-4 bg-[rgba(74,108,247,0.01)]">
+          <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
               <div
                 className="
@@ -46,9 +46,12 @@ const VidSection = () => {
                       flex
                       items-center
                       justify-center
-                      opacity-100 bg-[rgba(255,255,255,.75)]
-                      z-50
-                      text-[rgba(74,108,247,1)]
+                      bg-opacity-75
+                      
+                      bg-opacity-100
+    bg-[rgba(255,255,255,var(--tw-bg-opacity))]
+                      text-opacity-100
+    text-[rgba(74,108,247,var(--tw-text-opacity))]
                       hover:a31
                       transition-all
                     "
@@ -65,14 +68,16 @@ const VidSection = () => {
           <img src={images.shape} alt="shape" className="w-full" />
         </div>
       </section>
-      <section className="a3K">
+      <section className="pt-16">
         <div className="container mx-auto px-4">
-          <div className="a8 a1K ab[-16px]">
-            <div className="a7 ae">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full px-4">
               <div
                 className="
-                bg-[rgba(29,33,68,0.1)]
-                dark:a1k dark:a1Z
+                bg-opacity-100
+    bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+                dark:bg-opacity-100
+    dark:bg-[rgba(74,108,247,var(--tw-bg-opacity))] dark:bg-opacity-5
                 rounded-md
                 flex
                 flex-wrap

@@ -4,7 +4,54 @@
 
 @layer base {
   body {
-    @apply bg-[rgba(9,14,52,1)];
+    @apply dark:bg-opacity-100
+    dark:bg-[rgba(9,14,52,var(--tw-bg-opacity))];
+  }
+
+  .name-label,
+  .email-label,
+  .message-label {
+    @apply block text-sm font-medium text-opacity-100
+    text-[rgba(29,33,68,var(--tw-text-opacity))]
+    dark:text-opacity-100
+  dark:text-[rgba(255,255,255,var(--tw-text-opacity))]
+    mb-3;
+  }
+
+  .name-input,
+  .email-input {
+    @apply w-full border border-transparent
+    dark:bg-opacity-100
+  dark:bg-[rgba(36,43,81,var(--tw-bg-opacity))]
+    rounded-md   
+    py-3                    
+    px-6
+    text-base
+    placeholder-opacity-100
+  text-[rgba(149,156,177,var(--tw-placeholder-opacity))]                  
+    focus:border-opacity-100
+  focus:border-[rgba(74,108,247,var(--tw-border-opacity))];
+  }
+
+  .submit-btn,
+  .subscribe-btn {
+    @apply text-base text-center
+    font-medium
+    text-opacity-100
+  text-[rgba(255,255,255,var(--tw-text-opacity))]
+    bg-opacity-100
+  bg-[rgba(74,108,247,var(--tw-bg-opacity))]
+    py-3
+    px-9
+    mb-4
+   
+    cursor-pointer
+    border border-opacity-100
+    border-[rgba(74,108,247,var(--tw-border-opacity))]
+    hover:bg-opacity-80 hover:shadow
+    rounded-md
+    transition-all
+    duration-300;
   }
 }
 
