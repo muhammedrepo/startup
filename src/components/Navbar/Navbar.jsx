@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Header, Nav } from "./NavbarStyles";
 import { data } from "../../constants/links";
-import { Logo, Button } from "../../components";
+import { Logo } from "../../components";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -49,12 +50,12 @@ const Navbar = () => {
                     const { id, url, text } = link;
                     return (
                       <li key={id} className="relative">
-                        <a
-                          href={`${url}`}
-                          className="flex py-2 text-base font-medium text-opacity-100 text-[rgba(255,255,255,var(--tw-bg-opacity))] hover:text-primary lg:ml-8 lg:inline-flex lg:mr-0 lg:py-3 lg:px-0 xl:ml-12"
+                        <NavLink
+                          to={`${url}`}
+                          className="flex py-2 text-base font-medium hover:text-opacity-70 lg:ml-8 lg:inline-flex lg:mr-0 lg:py-3 lg:px-0 xl:ml-12"
                         >
                           {text}
-                        </a>
+                        </NavLink>
                       </li>
                     );
                   })}
@@ -62,36 +63,34 @@ const Navbar = () => {
               </Nav>
             </div>
             <div className="flex items-center justify-end pr-16 lg:pr-0">
-              <a
-                href="#login"
-                className="hidden py-3 px-7 text-base font-bold dark:text-opacity-100
-    dark:text-[rgba(255,255,255,var(--tw-text-opacity))] hover:text-primary md:block"
+              <Link
+                to="login"
+                className="hidden py-3 px-7 text-base font-bold hover:text-opacity-70 md:block"
               >
                 Sign In
-              </a>
+              </Link>
 
-              <a
-                href="signup.html"
+              <Link
+                to="register"
                 class="
                   hidden
                   md:block
                   text-base
                   font-bold
-                  text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                  
                   bg-opacity-100
   bg-[rgba(74,108,247,var(--tw-bg-opacity))]
                   py-3
                   px-8
                   md:px-9
                   lg:px-6
-                  xl:px9
+                  xl:px-9
                   hover:shadow hover:bg-opacity-90
                   rounded-md transition a1q duration-300
                 "
               >
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
         </div>

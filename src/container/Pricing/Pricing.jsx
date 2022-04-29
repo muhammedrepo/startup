@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, SectionTitle } from "../../components";
+import { SectionTitle } from "../../components";
 import { pricingData } from "../../constants/pricingData";
 
 const Pricing = () => {
@@ -16,8 +16,8 @@ const Pricing = () => {
               <span
                 className="
                     a1h
-                    dark:text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                    text-opacity-100
+                  text-[rgba(255,255,255,var(--tw-text-opacity))]
                     text-base font-semibold mr-4
                     monthly
                     cursor-pointer
@@ -74,7 +74,7 @@ const Pricing = () => {
               <span
                 className="
                     a1h
-                    dark:text-opacity-100
+                    text-opacity-100
     text-[rgba(255,255,255,var(--tw-text-opacity))]
                 text-base font-semibold ml-4
                     yearly
@@ -94,7 +94,7 @@ const Pricing = () => {
               <div
                 className="
                   relative z-10 aw
-                  dark:bg-opacity-100
+                  bg-opacity-100
     bg-[rgba(29,33,68,var(--tw-bg-opacity))]
                   a1n px-8 py-10 rounded-md mb-10               
                 "
@@ -103,44 +103,37 @@ const Pricing = () => {
                   <h3
                     className="
                       font-bold a1A
-                      dark: text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                       
                       text-3xl mb-2
                       price
                     "
                   >
                     $<span className="amount">{item.price}</span>
                     <span
-                      className="a1h dark:text-opacity-100
+                      className="a1h text-opacity-100
     text-[rgba(149,156,177,var(--tw-text-opacity))] time"
                     >
                       /mo
                     </span>
                   </h3>
-                  <h4
-                    className="text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))] font-bold text-xl mb-2"
-                  >
-                    {item.category}
-                  </h4>
+                  <h4 className="font-bold text-xl mb-2">{item.category}</h4>
                 </div>
-                <p
-                  className="text-base text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] mb-7"
-                >
-                  {item.desc}
-                </p>
+                <p className="text-base mb-7">{item.desc}</p>
                 <div
                   className="
-                    border-b border-opacity-100
-    border-[rgba(149,156,177,var(--tw-border-opacity))]
-                    dark:mr-5
+                    border-b
+                  border-[rgba(149,156,177,var(--tw-border-opacity))]
                     border-opacity-10
-                    dark:border-opacity-10
+                    border-[rgba(255,255,255,var(--tw-border-opacity))]
                     pb-8 mb-8
                   "
                 >
-                  <Button title="Start Free Trial" />
+                  <a
+                    href="#home"
+                    className="price-btn flex items-center justify-center w-full"
+                  >
+                    Start Free Trial
+                  </a>
                 </div>
 
                 <div>
@@ -166,8 +159,7 @@ const Pricing = () => {
                     </span>
                     <p
                       className="
-                        text-base font-medium text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] m-0
+                        text-base font-medium m-0
                       "
                     >
                       {item.x1}
@@ -195,8 +187,7 @@ const Pricing = () => {
                     </span>
                     <p
                       className="
-                    text-base font-medium text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] m-0
+                    text-base font-medium m-0
                       "
                     >
                       {item.x2}
@@ -224,8 +215,7 @@ const Pricing = () => {
                     </span>
                     <p
                       className="
-                    text-base font-medium text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] m-0
+                    text-base font-medium m-0
                       "
                     >
                       {item.x3}
@@ -234,7 +224,7 @@ const Pricing = () => {
                   <div className="flex items-center mb-3">
                     <span
                       className="
-                        bg-opacity-100
+                       
     bg-[rgba(74,108,247,var(--tw-bg-opacity))]
                         bg-opacity-10
                         text-opacity-100
@@ -253,8 +243,7 @@ const Pricing = () => {
                     </span>
                     <p
                       className="
-                        text-base font-medium text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] m-0
+                        text-base font-medium m-0
                       "
                     >
                       {item.x4}
@@ -263,7 +252,7 @@ const Pricing = () => {
                   <div className="flex items-center mb-3">
                     <span
                       className="
-                        bg-opacity-100
+                        
     bg-[rgba(74,108,247,var(--tw-bg-opacity))]
                         bg-opacity-10
                         text-opacity-100
@@ -282,8 +271,7 @@ const Pricing = () => {
                     </span>
                     <p
                       className="
-                        text-base font-medium text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] m-0
+                        text-base font-medium m-0
                       "
                     >
                       {item.x5}
@@ -311,8 +299,7 @@ const Pricing = () => {
                     </span>
                     <p
                       className="
-                        text-base font-medium text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] a45
+                        text-base font-medium a45
                       "
                     >
                       {item.x6}

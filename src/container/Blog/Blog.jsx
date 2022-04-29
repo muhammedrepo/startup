@@ -19,7 +19,7 @@ const Blog = () => {
               <div
                 className="
                   ad aw
-                  dark:bg-opacity-100 bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+                  bg-opacity-100 bg-[rgba(29,33,68,var(--tw-bg-opacity))]
                   a33 rounded-md overflow-hidden mb-10              
                 "
               >
@@ -38,7 +38,7 @@ const Blog = () => {
                       px-4
                       font-semibold
                       text-sm
-                      text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
+                      
                     "
                   >
                     {item.category}
@@ -60,13 +60,12 @@ const Blog = () => {
                       href="#home"
                       className="
                         font-bold a1A
-                        dark:text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                        
                         text-xl
                         sm:text-2xl
                         block mb-4
                         hover:a1W
-                        dark:hover:text-opacity-100 hover:text-[rgba(74,108,247,var(--tw-text-opacity))]
+                        hover:text-opacity-100 hover:text-[rgba(74,108,247,var(--tw-text-opacity))]
                       "
                     >
                       {item.title}
@@ -76,11 +75,11 @@ const Blog = () => {
                     className="
                     text-base
                     font-medium
-                    text-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))]
-                    border-b border-opacity-100
+                    
+                    border-b 
     border-[rgba(255,255,255,var(--tw-border-opacity))]                   
                     border-opacity-10
-                    dark:border-opacity-10
+                   
                     pb-6 mb-6
                     "
                   >
@@ -94,9 +93,8 @@ const Blog = () => {
                         2xl:pr-5
                         xl:mr-3
                         2xl:mr-5
-                        border-r border-opacity-100 border-[rgba(149,156,177,var(--tw-border-opacity))] border-opacity-10
-                        dark:mr-5 dark:border-opacity-10
-                      "
+                        border-r border-[rgba(149,156,177,var(--tw-border-opacity))] border-opacity-10
+                        mr-5 "
                     >
                       <div
                         className="
@@ -118,8 +116,7 @@ const Blog = () => {
                         <h4
                           className="
                             text-sm font-medium 
-                            dark:text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                            
                             a2K
                           "
                         >
@@ -128,40 +125,28 @@ const Blog = () => {
                             href="#home"
                             className="ml-1
                               
-                              dark:text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                              
                               hover:a1W
-                              dark:hover:a1W
+                              hover:a1W
                             "
                           >
                             {item.author}
                           </a>
                         </h4>
-                        <p
-                          className="text-xs text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))]"
-                        >
-                          {item.job}
-                        </p>
+                        <p className="text-xs ">{item.job}</p>
                       </div>
                     </div>
                     <div className="inline-block">
                       <h4
                         className="
                           text-sm font-medium 
-                          dark:text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
+                          
                           a2K
                         "
                       >
                         Date
                       </h4>
-                      <p
-                        className="text-xs text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))]"
-                      >
-                        {item.date}
-                      </p>
+                      <p className="text-xs ">{item.date}</p>
                     </div>
                   </div>
                 </div>

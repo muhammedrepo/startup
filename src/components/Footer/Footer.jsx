@@ -15,15 +15,11 @@ const Footer = () => {
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-[41.666667%] px-4">
             <div className="mb-16 max-w-[360px]">
               <a href="#home" className="inline-block mb-8">
-                <img
-                  src={images.logoWhite}
-                  alt="logo"
-                  className="w-full dark:aj"
-                />
+                <img src={images.logoWhite} alt="logo" className="w-full aj" />
                 <img
                   src={images.logo}
                   alt="logo"
-                  className="w-full aj dark:hidden"
+                  className="w-full aj hidden"
                 />
               </a>
               <p
@@ -121,7 +117,7 @@ const Footer = () => {
               <h2
                 className="
             font-bold a1A
-            dark:text-opacity-100
+            text-opacity-100
     text-[rgba(255,255,255,var(--tw-text-opacity))]
             text-xl mb-10
           "
@@ -197,7 +193,7 @@ const Footer = () => {
               <h2
                 className="
             font-bold a1A
-            dark:text-opacity-100
+            text-opacity-100
     text-[rgba(255,255,255,var(--tw-text-opacity))]
             text-xl mb-10
           "
@@ -264,7 +260,7 @@ const Footer = () => {
               <h2
                 className="
             font-bold a1A
-            dark:text-opacity-100
+            text-opacity-100
     text-[rgba(255,255,255,var(--tw-text-opacity))]
             text-xl mb-10
           "
@@ -337,8 +333,8 @@ const Footer = () => {
             className="
         text-opacity-100
     text-[rgba(149,156,177,var(--tw-text-opacity))]
-        dark:text-opacity-100
-    dark:text-[rgba(255,255,255,var(--tw-text-opacity))]
+        text-opacity-100
+    text-[rgba(255,255,255,var(--tw-text-opacity))]
         text-base text-center
       "
           >

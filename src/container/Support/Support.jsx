@@ -2,30 +2,26 @@ import React from "react";
 
 const Support = () => {
   return (
-    <section id="contact" className="pt-[120px] pb-20">
+    <section id="support" className="pt-[120px] pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-2/3 px-4">
             <div
               className="
-              bg-opacity-100
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))] bg-opacity-[3%]
+              
+                bg-[rgba(74,108,247,var(--tw-bg-opacity))] bg-opacity-[3%]
                   dark:bg-opacity-100
-   dark:bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+                dark:bg-[rgba(29,33,68,var(--tw-bg-opacity))]
                   rounded-md p-11 mb-12
                   lg:mb-5
                   sm:p-[55px]
                   lg:p-11
                   xl:p-[55px]
-                 
                 "
             >
               <h2
                 className="
-                    font-bold text-opacity-100
-    text-[rgba(9,14,52,var(--tw-text-opacity))]
-                    dark:text-opacity-100
-    dark:text-[rgba(255,255,255,var(--tw-text-opacity))]
+                    font-bold 
                     text-2xl
                     sm:text-3xl
                     lg:text-2xl
@@ -78,8 +74,8 @@ const Support = () => {
                         placeholder="Enter your Message"
                         className="
                             w-full border border-transparent
-                            dark:bg-opacity-100
-                          dark:bg-[rgba(36,43,81,var(--tw-bg-opacity))]
+                            bg-opacity-100
+                          bg-[rgba(36,43,81,var(--tw-bg-opacity))]
                             rounded-md a33
                             dark:a1n
                             px-6
@@ -125,10 +121,6 @@ const Support = () => {
             >
               <h3
                 className="
-                text-opacity-100
-    text-[rgba(9,14,52,var(--tw-text-opacity))]
-                    dark:text-opacity-100
-    dark:text-[rgba(255,255,255,var(--tw-text-opacity))]
                     font-bold text-2xl mb-4
                   "
               >
@@ -143,10 +135,8 @@ const Support = () => {
                     leading-6
                     pb-11
                     mb-11
-                    border-b
-                    border-opacity-100
-                  border-[rgba(149,156,177,var(--tw-border-opacity))]
-                    dark:border-[rgba(255,255,255,var(--tw-border-opacity))] dark:border-opacity-25
+                    border-b                   
+                    border-[rgba(255,255,255,var(--tw-border-opacity))] border-opacity-25
                   "
               >
                 Lorem ipsum dolor sited Sed ullam corper consectur adipiscing
@@ -183,7 +173,7 @@ const Support = () => {
                   No spam guaranteed, So please don’t send any spam mail.
                 </p>
               </form>
-              {/* <div className="a3 a4 a5 a1Y[-1]">
+              <div className="absolute top-0 left-0 -z-[1]">
                 <svg
                   width="370"
                   height="596"
@@ -193,7 +183,7 @@ const Support = () => {
                 >
                   <mask
                     id="mask0_88:141"
-                    style="mask-type: alpha"
+                    style={{ maskType: "alpha" }}
                     maskUnits="userSpaceOnUse"
                     x="0"
                     y="0"
@@ -317,7 +307,7 @@ const Support = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonGray } from "../../components";
+import { Link } from "react-router-dom";
 
 import { HeroWrap } from "./HeroStyles";
 
@@ -11,15 +11,12 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="hero-content flex flex-col justify-center  items-center max-w-[570px] mx-auto">
-                <h1
-                  className="mb-5 text-3xl dark:text-opacity-100
-    dark:text-[rgba(255,255,255,var(--tw-text-opacity))] sm:text-4xl md:text-5xl lg:text-[40px] xl:text-5xl font-bold text-center"
-                >
+                <h1 className="mb-5 text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-5xl font-bold text-center">
                   Startup Focused Tailwind CSS Template
                 </h1>
                 <p
                   className="max-w-[540px] text-xl md:text-xl font-medium mb-12 text-center 
-    dark:text-[rgba(255,255,255,var(--tw-text-opacity))] dark:opacity-90"
+    text-[rgba(255,255,255,var(--tw-text-opacity))] opacity-90"
                 >
                   A Complete Tailwind CSS Web Template Crafted for - Startup,
                   SaaS, Business, Software and Agencies. Comes with high-quality
@@ -27,10 +24,17 @@ const Hero = () => {
                 </p>
                 <ul className="flex justify-center items-center">
                   <li>
-                    <Button title="Get Started" />
+                    <Link to="login" className="hero-btn mx-2 py-4">
+                      Get Started
+                    </Link>
                   </li>
                   <li>
-                    <ButtonGray title="Learn More" />
+                    <Link
+                      to="login"
+                      className="hero-btn bg-opacity-10 bg-[rgba(255,255,255,var(--tw-bg-opacity))] hover:bg-opacity-20 mx-2 border-[rgba(255,255,255,var(--tw-bg-opacity))] py-4"
+                    >
+                      Learn More
+                    </Link>
                   </li>
                 </ul>
               </div>

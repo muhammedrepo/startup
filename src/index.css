@@ -4,25 +4,62 @@
 
 @layer base {
   body {
-    @apply dark:bg-opacity-100
-    dark:bg-[rgba(9,14,52,var(--tw-bg-opacity))];
+    @apply bg-opacity-100 bg-[rgba(9,14,52,var(--tw-bg-opacity))];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))];
+  }
+
+  a {
+    @apply text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))];
+  }
+
+  p {
+    @apply text-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))];
+  }
+  .text-color-w {
+    @apply text-opacity-100
+    text-[rgba(255,255,255,var(--tw-text-opacity))];
+  }
+  .bar {
+    @apply relative
+    w-[30px]
+    h-0.5
+    my-1.5
+    block
+    bg-opacity-100
+bg-[rgba(255,255,255,var(--tw-bg-opacity))];
+  }
+
+  .sub-link {
+    @apply block text-sm rounded py-[10px] px-4
+    text-opacity-100
+  text-[rgba(255,255,255,var(--tw-text-opacity))]
+    hover:opacity-70;
   }
 
   .name-label,
   .email-label,
-  .message-label {
-    @apply block text-sm font-medium text-opacity-100
-    text-[rgba(29,33,68,var(--tw-text-opacity))]
-    dark:text-opacity-100
-  dark:text-[rgba(255,255,255,var(--tw-text-opacity))]
+  .message-label,
+  .label {
+    @apply block text-sm font-medium 
+    
+  text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
     mb-3;
   }
 
   .name-input,
-  .email-input {
+  .email-input,
+  .input {
     @apply w-full border border-transparent
-    dark:bg-opacity-100
-  dark:bg-[rgba(36,43,81,var(--tw-bg-opacity))]
+    bg-opacity-100
+  bg-[rgba(36,43,81,var(--tw-bg-opacity))]
     rounded-md   
     py-3                    
     px-6
@@ -34,7 +71,11 @@
   }
 
   .submit-btn,
-  .subscribe-btn {
+  .subscribe-btn,
+  .price-btn,
+  .hero-btn,
+  .login-btn,
+  .btn {
     @apply text-base text-center
     font-medium
     text-opacity-100
@@ -80,7 +121,7 @@ text-[rgba(74,108,247,var(--tw-text-opacity))]
   }
   .about-list-b {
     @apply font-bold 
-    dark:text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
+    text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
     text-xl
     sm:text-2xl
     lg:text-xl

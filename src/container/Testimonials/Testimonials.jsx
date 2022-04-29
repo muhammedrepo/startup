@@ -11,7 +11,7 @@ const Testimonials = () => {
   z-10
   pt-[120px]
   pb-20
-  bg-opacity-100
+  
     bg-[rgba(74,108,247,var(--tw-bg-opacity))]
   bg-opacity-[3%]
 "
@@ -27,7 +27,7 @@ const Testimonials = () => {
               <div
                 className="
           
-          dark:bg-opacity-100
+          bg-opacity-100
     bg-[rgba(29,33,68,var(--tw-bg-opacity))]
           rounded-md p-8
           lg:px-5
@@ -38,31 +38,31 @@ const Testimonials = () => {
                 <div className="flex items-center mb-5">
                   <span
                     className="text-opacity-100
-    text-[rgba(251,176,64,var(--tw-text-opacity))] a3U ah"
+    text-[rgba(251,176,64,var(--tw-text-opacity))] mr-1 block"
                   >
                     <img src={images.star} alt="" />
                   </span>
                   <span
                     className="text-opacity-100
-    text-[rgba(251,176,64,var(--tw-text-opacity))] a3U ah"
+    text-[rgba(251,176,64,var(--tw-text-opacity))] mr-1 block"
                   >
                     <img src={images.star} alt="" />
                   </span>
                   <span
                     className="text-opacity-100
-    text-[rgba(251,176,64,var(--tw-text-opacity))] a3U ah"
+    text-[rgba(251,176,64,var(--tw-text-opacity))] mr-1 block"
                   >
                     <img src={images.star} alt="" />
                   </span>
                   <span
                     className="text-opacity-100
-    text-[rgba(251,176,64,var(--tw-text-opacity))] a3U ah"
+    text-[rgba(251,176,64,var(--tw-text-opacity))] mr-1 block"
                   >
                     <img src={images.star} alt="" />
                   </span>
                   <span
                     className="text-opacity-100
-    text-[rgba(251,176,64,var(--tw-text-opacity))] a3U ah"
+    text-[rgba(251,176,64,var(--tw-text-opacity))] mr-1 block"
                   >
                     <img src={images.star} alt="" />
                   </span>
@@ -70,13 +70,13 @@ const Testimonials = () => {
                 <p
                   className="
             text-base
-            dark:text-opacity-100
+            text-opacity-100
     text-[rgba(255,255,255,var(--tw-text-opacity))]
-            leading-6 pb-8 border-b-2 border-opacity-100
+            leading-6 pb-8 border-b-2 border-opacity-10
     border-[rgba(149,156,177,var(--tw-border-opacity))]
-            dark:mr-5
-            border-opacity-10
-            dark:border-opacity-10
+            mr-5
+            
+           
             mb-8
           "
                 >
@@ -102,19 +102,12 @@ const Testimonials = () => {
                 lg:text-base
                 xl:text-lg
                 
-                dark:text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
                 font-semibold mb-1
               "
                     >
                       {item.name}
                     </h5>
-                    <p
-                      className="text-sm text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))]"
-                    >
-                      {item.job}
-                    </p>
+                    <p className="text-sm">{item.job}</p>
                   </div>
                 </div>
               </div>

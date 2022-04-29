@@ -16,7 +16,7 @@ const About = () => {
                 <div className="mb-12 lg:mb-0 max-w-[570px]">
                   <h2
                     className="
-                      dark:text-opacity-100	dark:text-[rgba(255,255,255,var(--tw-text-opacity))]
+                      text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
                       font-bold
                       text-3xl
                       sm:text-4xl
