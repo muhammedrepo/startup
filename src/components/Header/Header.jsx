@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
+  const [switchToggled, setSwitchToggled] = useState(false);
+
+  const ToggleSwitch = () => {
+    setSwitchToggled(!switchToggled);
+  };
   return (
     <header
       className="header bg-transparent absolute
@@ -20,19 +25,14 @@ const Header = () => {
           <div className="flex px-4 justify-between items-center w-full">
             <div>
               <button
+                onClick={ToggleSwitch}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
-                className="
-                  block
-                  absolute
-                  right-4
-                  top-1/2
-                  -translate-y-1/2
-                  lg:hidden
-                  focus:an
-                  ring-opacity-100
-    ring-[rgba(74, 108, 247, var(--tw-ring-opacity))] px-3 py-1.5 rounded-lg
-                "
+                className={
+                  switchToggled
+                    ? "navbarTogglerActive navbarToggler"
+                    : "navbarToggler"
+                }
               >
                 <span className="bar"></span>
                 <span className="bar"></span>
@@ -40,18 +40,9 @@ const Header = () => {
               </button>
               <nav
                 id="navbarCollapse"
-                className="
-                  absolute py-5
-                  lg:py-0 lg:px-4
-                  xl:px-6
-                 bg-opacity-100
-    bg-[rgba(29,33,68,var(--tw-bg-opacity))]
-                  lg:bg-transparent
-                  aA rounded-lg max-w-[250px] w-full
-                  lg:max-w-full lg:w-full
-                  right-4 top-full hidden
-                  lg:block lg:static lg:aE
-                "
+                className={
+                  switchToggled ? "navbarCollapseActive" : "navbarCollapse"
+                }
               >
                 <ul className="aF lg:flex">
                   <li className="relative aG">
@@ -62,7 +53,7 @@ const Header = () => {
                         text-base
                         text-dark
                         
-                        group-hover:aJ
+                        hover:opacity-70
                         py-6
                         lg:py-6 lg:inline-flex lg:px-0
                         flex mx-8
@@ -79,7 +70,7 @@ const Header = () => {
                         menu-scroll
                         text-base
                         
-                        group-hover:aJ
+                        hover:opacity-70
                         py-6
                         lg:py-6 lg:inline-flex lg:px-0
                         flex mx-8
@@ -97,7 +88,7 @@ const Header = () => {
                         menu-scroll
                         text-base
                         
-                        group-hover:aJ
+                        hover:opacity-70
                         py-6
                         lg:py-6 lg:inline-flex lg:px-0
                         flex mx-8
@@ -115,7 +106,7 @@ const Header = () => {
                         menu-scroll
                         text-base
                         
-                        group-hover:aJ
+                        hover:opacity-70
                         py-6
                         lg:py-6 lg:inline-flex lg:px-0
                         flex mx-8
@@ -126,13 +117,14 @@ const Header = () => {
                       Support
                     </a>
                   </li>
-                  <li className="relative aG submenu-item">
+                  <li className="relative submenu-item">
                     <a
-                      href="#page"
+                      onClick={ToggleSwitch}
+                      href="#pages"
                       className="
                       text-base
                         
-                        group-hover:aJ
+                        hover:opacity-70
                         py-6
                         lg:py-6 lg:inline-flex lg:px-0
                         flex mx-8
@@ -156,47 +148,34 @@ const Header = () => {
                       Pages
                     </a>
                     <div
-                      className="
-                        submenu
-                        hidden relative
-                        lg:absolute
-                        w-[250px] top-full
-                        lg:top-[110%]
-                        left-0 a13
-                        lg:aA
-                        p-4
-                        lg:block lg:opacity-0 lg:invisible
-                        group-hover:a17
-                        lg:group-hover:a18 lg:group-hover:aC
-                         bg-opacity-100 bg-[rgba(29,33,68,var(--tw-bg-opacity))]
-                        
-                        a19[top] duration-300
-                      "
+                      className={
+                        switchToggled ? "page-submenu-active" : "page-submenu"
+                      }
                     >
-                      <a href="about.html" className="sub-link">
+                      <Link to="about" className="sub-link">
                         About Page
-                      </a>
-                      <a href="contact.html" className="sub-link">
+                      </Link>
+                      <Link to="contact" className="sub-link">
                         Contact Page
-                      </a>
-                      <a href="blog-grids.html" className="sub-link">
+                      </Link>
+                      <Link to="blog" className="sub-link">
                         Blog Grid Page
-                      </a>
-                      <a href="blog-sidebar.html" className="sub-link">
+                      </Link>
+                      <Link to="blog-sidebar" className="sub-link">
                         Blog Sidebar Page
-                      </a>
-                      <a href="blog-details.html" className="sub-link">
+                      </Link>
+                      <Link to="blog-details" className="sub-link">
                         Blog Details Page
-                      </a>
-                      <a href="signin.html" className="sub-link">
+                      </Link>
+                      <Link to="login" className="sub-link">
                         Sign In Page
-                      </a>
-                      <a href="signup.html" className="sub-link">
+                      </Link>
+                      <Link to="register" className="sub-link">
                         Sign Up Page
-                      </a>
-                      <a href="404.html" className="sub-link">
+                      </Link>
+                      <Link to="404" className="sub-link">
                         404 Page
-                      </a>
+                      </Link>
                     </div>
                   </li>
                 </ul>
@@ -204,7 +183,7 @@ const Header = () => {
             </div>
             <div className="flex justify-end items-center pr-16 lg:pr-0">
               <Link
-                to="login"
+                to="/register"
                 className="
                   hidden
                   md:block
@@ -217,7 +196,7 @@ const Header = () => {
                 Sign In
               </Link>
               <Link
-                to="register"
+                to="/register"
                 className="
                 hidden
                   md:block

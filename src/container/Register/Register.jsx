@@ -1,7 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Alert, FormRow } from "../../components";
+import { useAppContext } from "../../context/appContext";
 
+const initialState = {
+  name: "",
+  email: "",
+  password: "",
+  isMemeber: true,
+};
 const Register = () => {
+  const [values, setValues] = useState(initialState);
+  // global state and useNavigate
+  const { isLoading, showAlert } = useAppContext();
+
+  const toggleMember = () => {
+    setValues({ ...values, isMemeber: !values.isMemeber });
+  };
+  const handleChange = (e) => {
+    console.log(e.target);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  };
+
   return (
     <section className="relative z-10 pt-[180px] mb-[120px]">
       <div className="container mx-auto px-4">
@@ -25,7 +48,9 @@ const Register = () => {
                   mb-3 text-center
                 "
               >
-                Create your account
+                {values.isMemeber
+                  ? "Sign in to your account"
+                  : "Create your account"}
               </h3>
               <p
                 className="
@@ -36,8 +61,11 @@ const Register = () => {
                   text-center
                 "
               >
-                It's totally free and super easy
+                {values.isMemeber
+                  ? "Login to your account for a faster checkout."
+                  : "It's totally free and super easy"}
               </p>
+              {showAlert && <Alert />}
               <button
                 className="login-btn w-full flex items-center justify-center mb-6 bg-opacity-100
     bg-[rgba(36,43,81,var(--tw-bg-opacity))] border-[rgba(36,43,81,var(--tw-border-opacity))] text-opacity-100
@@ -97,7 +125,9 @@ const Register = () => {
                     font-medium
                   "
                 >
-                  Or, sign up with your email
+                  {values.isMemeber
+                    ? " Or, sign in with your email"
+                    : "Or, sign up with your email"}
                 </p>
                 <span
                   className="
@@ -108,38 +138,35 @@ const Register = () => {
                   "
                 ></span>
               </div>
-              <form>
+              <form onSubmit={onSubmit}>
+                {!values.isMemeber && (
+                  <div className="mb-8">
+                    <FormRow
+                      type="text"
+                      name="Full Name"
+                      value={values.name}
+                      handleChange={handleChange}
+                      placeholder="Enter full name"
+                    />
+                  </div>
+                )}
+
                 <div className="mb-8">
-                  <label for="name" className="label">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter your full name"
-                    className="input"
-                  />
-                </div>
-                <div className="mb-8">
-                  <label for="email" className="label">
-                    Work Email
-                  </label>
-                  <input
+                  <FormRow
                     type="email"
-                    name="email"
+                    name="Work Email"
+                    value={values.email}
+                    handleChange={handleChange}
                     placeholder="Enter your Email"
-                    className="input"
                   />
                 </div>
                 <div className="mb-8">
-                  <label for="password" className="label">
-                    Your Password
-                  </label>
-                  <input
+                  <FormRow
                     type="password"
-                    name="password"
-                    placeholder="Enter your Password"
-                    className="input"
+                    name="Your Password"
+                    value={values.password}
+                    handleChange={handleChange}
+                    placeholder="Enter your password"
                   />
                 </div>
                 <div className="flex items-center justify-between mb-8">
@@ -188,45 +215,67 @@ const Register = () => {
                           </span>
                         </div>
                       </div>
+
                       <span>
-                        By creating account means you agree to the{" "}
-                        <a
-                          href="#home"
-                          class="text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))] font-medium
+                        {values.isMemeber
+                          ? "Keep me signed in"
+                          : "By creating account means you agree to the"}
+
+                        {values.isMemeber ? (
+                          <a
+                            href="#home"
+                            className="text-color-b ml-24 font-medium
+                        hover:underline
+                      "
+                          >
+                            Forgot Password?
+                          </a>
+                        ) : (
+                          <>
+                            <a
+                              href="#home"
+                              class="text-color-b font-medium
                         hover:underline"
-                        >
-                          Terms and Conditions
-                        </a>
-                        , and our{" "}
-                        <a
-                          href="#home"
-                          class="text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))] font-medium
+                            >
+                              {" "}
+                              Terms and Conditions
+                            </a>
+                            , and our
+                            <a
+                              href="#home"
+                              class="text-color-b font-medium
                         hover:underline"
-                        >
-                          Privacy Policy
-                        </a>
+                            >
+                              {" "}
+                              Privacy Policy
+                            </a>
+                          </>
+                        )}
                       </span>
                     </label>
                   </div>
                 </div>
                 <div className="mb-6">
-                  <button className="submit-btn w-full flex items-center justify-center">
-                    Sign up
+                  <button
+                    type="submit"
+                    className="submit-btn w-full flex items-center justify-center"
+                  >
+                    {values.isMemeber ? "Sign in" : "Sign up"}
                   </button>
                 </div>
               </form>
               <p className="text-center">
-                Already using Startup?
-                <Link
-                  to="/login"
-                  className="text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))] font-medium
+                {values.isMemeber
+                  ? "Don’t you have an account?"
+                  : "Already using Startup?"}
+                <button
+                  type="button"
+                  onClick={toggleMember}
+                  className="text-color-b font-medium
                         hover:underline ml-2"
                 >
-                  Sign in
-                </Link>
+                  {values.isMemeber ? "Sign up" : "Sign in"}
+                </button>
               </p>
             </div>
           </div>

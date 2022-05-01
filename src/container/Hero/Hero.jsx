@@ -24,13 +24,13 @@ const Hero = () => {
                 </p>
                 <ul className="flex justify-center items-center">
                   <li>
-                    <Link to="login" className="hero-btn mx-2 py-4">
+                    <Link to="register" className="hero-btn mx-2 py-4">
                       Get Started
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="login"
+                      to="register"
                       className="hero-btn bg-opacity-10 bg-[rgba(255,255,255,var(--tw-bg-opacity))] hover:bg-opacity-20 mx-2 border-[rgba(255,255,255,var(--tw-bg-opacity))] py-4"
                     >
                       Learn More

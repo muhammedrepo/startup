@@ -1,4 +1,5 @@
 import React from "react";
+import { FormRow } from "../../components";
 
 const Support = () => {
   return (
@@ -41,25 +42,19 @@ const Support = () => {
                 <div className="flex flex-wrap -mx-4">
                   <div className="w-full md:w-1/2 px-4">
                     <div className="mb-8">
-                      <label for="name" className="name-label">
-                        Your Name
-                      </label>
-                      <input
+                      <FormRow
                         type="text"
+                        name="Your Name"
                         placeholder="Enter your name"
-                        className="name-input"
                       />
                     </div>
                   </div>
                   <div className="w-full md:w-1/2 px-4">
                     <div className="mb-8">
-                      <label for="email" className="email-label">
-                        Your Email
-                      </label>
-                      <input
+                      <FormRow
                         type="email"
+                        name="Your Email"
                         placeholder="Enter your email"
-                        className="email-input"
                       />
                     </div>
                   </div>
@@ -143,18 +138,13 @@ const Support = () => {
                 Mae ornare massa quis lectus.
               </p>
               <form>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  className="name-input mb-4"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="email-input mb-4"
-                />
+                <div className="mb-4">
+                  <FormRow type="text" placeholder="Enter your name" />
+                </div>
+
+                <div className="mb-4">
+                  <FormRow type="email" placeholder="Enter your email" />
+                </div>
                 <input
                   type="submit"
                   value="Subscribe"
