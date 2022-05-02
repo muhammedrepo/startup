@@ -20,7 +20,8 @@
     @apply text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))];
   }
 
-  p {
+  p,
+  .p-text-c {
     @apply text-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))];
   }
   .text-color-w {
@@ -30,6 +31,17 @@
   .text-color-b {
     @apply text-opacity-100
     text-[rgba(74,108,247,var(--tw-text-opacity))];
+  }
+  .arrow-forward {
+    @apply block
+    w-2
+    h-2
+    border-t-2
+    border-r-2
+    border-opacity-100
+border-[rgba(149,156,177,var(--tw-border-opacity))]
+    rotate-45 transform
+    mr-3;
   }
   .bar {
     @apply relative
@@ -115,6 +127,29 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
      duration-300;
   }
 
+  .blog-detail-list {
+    @apply font-medium p-text-c text-base
+    sm:text-lg
+    lg:text-base
+    xl:text-lg
+    mb-2;
+  }
+
+  .blog-detail-tag,
+  .blog-detail-social {
+    @apply inline-flex
+    items-center
+    justify-center
+    p-text-c
+    px-4
+    mr-4
+    rounded-md
+    py-2
+    bg-opacity-10 bg-[rgba(74,108,247,var(--tw-bg-opacity))]
+    p-text-c
+    hover:bg-opacity-100 hover:text-color-w;
+  }
+
   .name-label,
   .email-label,
   .message-label,
@@ -135,8 +170,9 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
     py-3                    
     px-6
     text-base
-    placeholder-opacity-100
-  text-[rgba(149,156,177,var(--tw-placeholder-opacity))]                  
+    
+    text-opacity-100
+  text-[rgba(149,156,177,var(--tw-text-opacity))]                  
     focus:border-opacity-100
   focus:border-[rgba(74,108,247,var(--tw-border-opacity))];
   }
@@ -208,10 +244,14 @@ text-[rgba(74,108,247,var(--tw-text-opacity))]
                     sm:leading-5
                     font-medium;
   }
-  .alert-danger {
-    @apply bg-red-200 text-red-700;
-  }
-  .alert-success {
-    @apply bg-blue-200 text-blue-700;
-  }
+}
+
+.alert-danger {
+  background-color: rgb(220, 170, 170);
+  color: rgb(150, 4, 4);
+}
+
+.alert-success {
+  background-color: rgb(166, 214, 166);
+  color: green;
 }

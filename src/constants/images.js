@@ -29,6 +29,10 @@ import pricingCard from "../images/svg/pricingCard.svg";
 import blog1 from "../images/blog/blog-01.jpg";
 import blog2 from "../images/blog/blog-02.jpg";
 import blog3 from "../images/blog/blog-03.jpg";
+import post1 from "../images/blog/post-01.jpeg";
+import post2 from "../images/blog/post-02.jpeg";
+import post3 from "../images/blog/post-03.jpeg";
+import blogDetail from "../images/blog/blog-details-02.jpeg";
 import author1 from "../images/blog/author-01.png";
 import author2 from "../images/blog/author-02.png";
 import author3 from "../images/blog/author-03.png";
@@ -41,6 +45,10 @@ export default {
   blog1,
   blog2,
   blog3,
+  post1,
+  post2,
+  post3,
+  blogDetail,
   author1,
   author2,
   author3,

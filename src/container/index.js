@@ -5,6 +5,7 @@ export { default as About } from "./About/About";
 export { default as Testimonials } from "./Testimonials/Testimonials";
 export { default as Pricing } from "./Pricing/Pricing";
 export { default as Blog } from "./Blog/Blog";
+export { default as BlogSingle } from "./BlogSingle/BlogSingle";
 export { default as Support } from "./Support/Support";
 export { default as SignIn } from "./SignIn/SignIn";
 export { default as Error } from "./Error/Error";

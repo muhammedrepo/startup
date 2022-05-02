@@ -44,22 +44,11 @@ const Contact = () => {
                     </a>
                     <span
                       class="
-                      block
-                      w-2
-                      h-2
-                      border-t-2
-                      border-r-2
-                      border-opacity-100
-    border-[rgba(149,156,177,var(--tw-border-opacity))]
-                      rotate-45 transform
-                      mr-3
+                      arrow-forward
                     "
                     ></span>
                   </li>
-                  <li
-                    class="font-medium text-base text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]"
-                  >
+                  <li class="font-medium text-base text-color-b">
                     Contact page
                   </li>
                 </ul>

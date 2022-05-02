@@ -1,12 +1,9 @@
-import React from "react";
+import { useAppContext } from "../../context/appContext";
 
 const Alert = () => {
+  const { alertType, alertText } = useAppContext();
   return (
-    <>
-      <p className="text-center p-3 mb-8 alert-danger">
-        Please provide all values!
-      </p>
-    </>
+    <p className={`alert-${alertType} text-center p-3 mb-8`}>{alertText}</p>
   );
 };
 

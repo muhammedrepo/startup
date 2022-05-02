@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { SectionTitle } from "../../components";
 
 import { blogData } from "../../constants/blogData";
@@ -18,9 +19,9 @@ const Blog = () => {
             <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 px-4" key={index}>
               <div
                 className="
-                  ad aw
+                  relative
                   bg-opacity-100 bg-[rgba(29,33,68,var(--tw-bg-opacity))]
-                  a33 rounded-md overflow-hidden mb-10              
+                  shadow-sm rounded-md overflow-hidden mb-10              
                 "
               >
                 <a href="#home" className="w-full block relative">
@@ -56,20 +57,18 @@ const Blog = () => {
                   "
                 >
                   <h3>
-                    <a
-                      href="#home"
+                    <Link
+                      to="/blog-detail"
                       className="
-                        font-bold a1A
-                        
+                        font-bold
                         text-xl
                         sm:text-2xl
                         block mb-4
-                        hover:a1W
-                        hover:text-opacity-100 hover:text-[rgba(74,108,247,var(--tw-text-opacity))]
+                        hover:text-opacity-100 hover:text-color-b
                       "
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </h3>
                   <p
                     className="
@@ -94,7 +93,7 @@ const Blog = () => {
                         xl:mr-3
                         2xl:mr-5
                         border-r border-[rgba(149,156,177,var(--tw-border-opacity))] border-opacity-10
-                        mr-5 "
+                         "
                     >
                       <div
                         className="
@@ -117,17 +116,14 @@ const Blog = () => {
                           className="
                             text-sm font-medium 
                             
-                            a2K
+                            mb-1
                           "
                         >
                           By
                           <a
                             href="#home"
                             className="ml-1
-                              
-                              
-                              hover:a1W
-                              hover:a1W
+                              hover:text-color-b
                             "
                           >
                             {item.author}
@@ -139,9 +135,7 @@ const Blog = () => {
                     <div className="inline-block">
                       <h4
                         className="
-                          text-sm font-medium 
-                          
-                          a2K
+                          text-sm font-medium mb-1
                         "
                       >
                         Date

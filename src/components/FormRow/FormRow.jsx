@@ -1,9 +1,8 @@
-import { toHaveFormValues } from "@testing-library/jest-dom/dist/matchers";
 import React from "react";
 
 const FormRow = ({
   type,
-  value,
+  values,
   name,
   handleChange,
   labelText,
@@ -14,7 +13,7 @@ const FormRow = ({
       <label className="label">{labelText || name}</label>
       <input
         type={type}
-        value={value}
+        value={values}
         name={name}
         onChange={handleChange}
         placeholder={placeholder}

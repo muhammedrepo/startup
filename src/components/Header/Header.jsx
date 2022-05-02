@@ -164,7 +164,7 @@ const Header = () => {
                       <Link to="blog-sidebar" className="sub-link">
                         Blog Sidebar Page
                       </Link>
-                      <Link to="blog-details" className="sub-link">
+                      <Link to="blog-detail" className="sub-link">
                         Blog Details Page
                       </Link>
                       <Link to="login" className="sub-link">

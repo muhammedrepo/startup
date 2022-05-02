@@ -5,6 +5,7 @@ import SectionTitle from "./SectionTitle/SectionTitle";
 import Header from "./Header/Header";
 import FormRow from "./FormRow/FormRow";
 import Alert from "./Alert/Alert";
+import Subscribe from "./Subscribe/Subscribe";
 
 export {
   Logo,
@@ -15,4 +16,5 @@ export {
   Footer,
   FormRow,
   Alert,
+  Subscribe,
 };
