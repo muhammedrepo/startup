@@ -492,7 +492,7 @@ const BlogSidebar = () => {
                       <a
                         href="#home"
                         className="
-                            blog-detail-social sm:ml-3 mr-0
+                            blog-detail-social sm:ml-3 mr-2
                           "
                       >
                         <svg
@@ -507,7 +507,7 @@ const BlogSidebar = () => {
                       <a
                         href="#home"
                         className="
-                        blog-detail-social sm:ml-3 mr-0
+                        blog-detail-social sm:ml-3 mr-2
                           "
                       >
                         <svg
