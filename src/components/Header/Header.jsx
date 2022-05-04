@@ -4,20 +4,29 @@ import Logo from "../Logo/Logo";
 
 const Header = () => {
   const [switchToggled, setSwitchToggled] = useState(false);
+  const [topBarScroll, setTopBarScroll] = useState(false);
 
   const ToggleSwitch = () => {
     setSwitchToggled(!switchToggled);
   };
+
+  const animateTopBar = () => {
+    if (window.scrollY >= 100) {
+      setTopBarScroll(true);
+    } else {
+      setTopBarScroll(false);
+    }
+  };
+
+  window.addEventListener("scroll", animateTopBar);
+
   return (
     <header
-      className="header bg-transparent absolute
-        top-0
-        left-0
-        z-40
-        w-full
-        flex
-        items-center
-      "
+      className={
+        topBarScroll
+          ? "sticky top-0 left-0 w-full flex items-center bg-[rgba(74,108,247,var(--tw-bg-opacity))] bg-opacity-20 backdrop-blur-sm shadow-md z-50 transition-all duration-150"
+          : "bg-transparent absolute top-0 left-0 z-40 w-full flex items-center"
+      }
     >
       <div className="container mx-auto px-4">
         <div className="flex -mx-4 items-center justify-between relative">
@@ -46,90 +55,30 @@ const Header = () => {
               >
                 <ul className="aF lg:flex">
                   <li className="relative aG">
-                    <NavLink
-                      to="/"
-                      className="
-                        menu-scroll
-                        text-base
-                        text-dark
-                        
-                        hover:opacity-70
-                        py-6
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex mx-8
-                        lg:mr-0
-                      "
-                    >
+                    <NavLink to="/" className="menu-scroll">
                       Home
                     </NavLink>
                   </li>
                   <li className="relative aG">
-                    <a
-                      href="#about"
-                      className="
-                        menu-scroll
-                        text-base
-                        
-                        hover:opacity-70
-                        py-6
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex mx-8
-                        lg:mr-0 lg:ml-8
-                        xl:ml-12
-                      "
-                    >
+                    <a href="#about" className="menu-scroll">
                       About
                     </a>
                   </li>
                   <li className="relative aG">
-                    <a
-                      href="#pricing"
-                      className="
-                        menu-scroll
-                        text-base
-                        
-                        hover:opacity-70
-                        py-6
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex mx-8
-                        lg:mr-0 lg:ml-8
-                        xl:ml-12
-                      "
-                    >
+                    <a href="#pricing" className="menu-scroll">
                       Pricing
                     </a>
                   </li>
                   <li className="relative aG">
-                    <a
-                      href="#support"
-                      className="
-                        menu-scroll
-                        text-base
-                        
-                        hover:opacity-70
-                        py-6
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex mx-8
-                        lg:mr-0 lg:ml-8
-                        xl:ml-12
-                      "
-                    >
+                    <a href="#support" className="menu-scroll">
                       Support
                     </a>
                   </li>
-                  <li className="relative submenu-item">
+                  <li className="relative submenu-item" onClick={ToggleSwitch}>
                     <a
-                      onClick={ToggleSwitch}
                       href="#pages"
                       className="
-                      text-base
-                        
-                        hover:opacity-70
-                        py-6
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex mx-8
-                        lg:mr-0 lg:ml-8
-                        xl:ml-12
+                      menu-scroll
                         relative
                         after:absolute
                         after:w-2
@@ -152,30 +101,33 @@ const Header = () => {
                         switchToggled ? "page-submenu-active" : "page-submenu"
                       }
                     >
-                      <Link to="about" className="sub-link">
-                        About Page
-                      </Link>
-                      <Link to="contact" className="sub-link">
-                        Contact Page
-                      </Link>
-                      <Link to="blog" className="sub-link">
-                        Blog Grid Page
-                      </Link>
-                      <Link to="blog-sidebar" className="sub-link">
-                        Blog Sidebar Page
-                      </Link>
-                      <Link to="blog-detail" className="sub-link">
-                        Blog Details Page
-                      </Link>
-                      <Link to="login" className="sub-link">
-                        Sign In Page
-                      </Link>
-                      <Link to="register" className="sub-link">
-                        Sign Up Page
-                      </Link>
-                      <Link to="404" className="sub-link">
-                        404 Page
-                      </Link>
+                      {[
+                        { id: 1, text: "About Page", url: "about" },
+                        { id: 2, text: "Contact Page", url: "contact" },
+                        { id: 3, text: "Blog Grid Page", url: "blog" },
+                        {
+                          id: 4,
+                          text: "Blog Sidebar Page",
+                          url: "blog-sidebar",
+                        },
+                        {
+                          id: 5,
+                          text: "Blog Details Page",
+                          url: "blog-detail",
+                        },
+                        { id: 6, text: "Sign In Page", url: "register" },
+                        { id: 6, text: "Sign Up Page", url: "register" },
+                        { id: 7, text: "404 Page", url: "404" },
+                      ].map((link) => (
+                        <Link
+                          key={link.id}
+                          to={`${link.url}`}
+                          className="sub-link"
+                          onClick={ToggleSwitch}
+                        >
+                          {link.text}
+                        </Link>
+                      ))}
                     </div>
                   </li>
                 </ul>
