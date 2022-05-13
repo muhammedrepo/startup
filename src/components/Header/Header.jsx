@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
-import Logo from "../Logo/Logo";
+import { Logo } from "../../components";
 
 const Header = () => {
   const [switchToggled, setSwitchToggled] = useState(false);
