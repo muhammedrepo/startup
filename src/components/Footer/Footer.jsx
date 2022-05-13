@@ -342,8 +342,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="a3 a_ a2a a1Y[-1]">
-        {/* <svg
+      <div className="absolute right-0 top-[3.5rem] -z-[1]">
+        <svg
           width="55"
           height="99"
           viewBox="0 0 55 99"
@@ -353,7 +353,7 @@ const Footer = () => {
           <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
           <mask
             id="mask0_94:899"
-            style="mask-type: alpha"
+            style={{ maskType: "alpha" }}
             maskUnits="userSpaceOnUse"
             x="0"
             y="0"
@@ -408,10 +408,10 @@ const Footer = () => {
               <stop offset="1" stop-opacity="0" />
             </radialGradient>
           </defs>
-        </svg> */}
+        </svg>
       </div>
-      <div className="a3 a5 a2b a1Y[-1]">
-        {/* <svg
+      <div className="absolute left-0 bottom-24 -z-[1]">
+        <svg
           width="79"
           height="94"
           viewBox="0 0 79 94"
@@ -524,7 +524,7 @@ const Footer = () => {
               <stop offset="1" stop-color="#4A6CF7" stop-opacity="0.51" />
             </linearGradient>
           </defs>
-        </svg> */}
+        </svg>
       </div>
     </footer>
   );

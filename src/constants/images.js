@@ -25,6 +25,8 @@ import testi1 from "../images/testimonials/1.png";
 import testi2 from "../images/testimonials/2.png";
 import testi3 from "../images/testimonials/3.png";
 import testibg from "../images/svg/testibg.svg";
+import footSvg from "../images/svg/footer.svg";
+import footSvg2 from "../images/svg/footer-2.svg";
 import pricingCard from "../images/svg/pricingCard.svg";
 import blog1 from "../images/blog/blog-01.jpg";
 import blog2 from "../images/blog/blog-02.jpg";
@@ -52,6 +54,8 @@ export default {
   author1,
   author2,
   author3,
+  footSvg,
+  footSvg2,
 
   ab1,
   ab2,

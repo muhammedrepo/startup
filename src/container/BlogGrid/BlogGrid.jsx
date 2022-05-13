@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ScrollToTop } from "../../constants";
 import Blog from "../Blog/Blog";
 
 const BlogGrid = () => {
   return (
     <>
+      <ScrollToTop />
       <section className="relative z-10 pt-[150px] overflow-hidden">
         <div className="container mx-auto p-4">
           <div className="flex flex-wrap items-center -mx-4">

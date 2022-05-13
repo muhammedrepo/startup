@@ -5,7 +5,7 @@ import { HeroWrap } from "./HeroStyles";
 
 const Hero = () => {
   return (
-    <HeroWrap>
+    <HeroWrap id="home">
       <div className="relative z-10 pt-[120px] pb-[110px] md:pt-[150px] md:pb-[120px] xl:pt-[180px] 2xl:pt-[210px]">
         <div className="container mx-auto px-4">
           <div className="-mx-4 flex flex-wrap">

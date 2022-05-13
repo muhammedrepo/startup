@@ -23,7 +23,7 @@ const Testimonials = () => {
         />
         <div className="flex flex-wrap -mx-4">
           {testimonialsData.map((item, index) => (
-            <div className="w-full md:w-1/2 lg:w-1/3 px-4" key="index">
+            <div className="w-full md:w-1/2 lg:w-1/3 px-4" key={index}>
               <div
                 className="
           

@@ -1,9 +1,11 @@
 import React from "react";
+import { ScrollToTop } from "../../constants";
 import Support from "../Support/Support";
 
 const Contact = () => {
   return (
     <>
+      <ScrollToTop />
       <section class="relative z-10 pt-[150px] overflow-hidden">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap items-center -mx-4">

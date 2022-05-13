@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
@@ -55,24 +56,56 @@ const Header = () => {
               >
                 <ul className="aF lg:flex">
                   <li className="relative aG">
-                    <NavLink to="/" className="menu-scroll">
+                    <Link
+                      to="home"
+                      className="menu-scroll"
+                      spy={true}
+                      smooth={true}
+                      duration={1000}
+                      exact="true"
+                      offset={-80}
+                    >
                       Home
-                    </NavLink>
+                    </Link>
                   </li>
                   <li className="relative aG">
-                    <a href="#about" className="menu-scroll">
+                    <Link
+                      to="about"
+                      className="menu-scroll"
+                      spy={true}
+                      smooth={true}
+                      duration={1000}
+                      exact="true"
+                      offset={-80}
+                    >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li className="relative aG">
-                    <a href="#pricing" className="menu-scroll">
+                    <Link
+                      to="pricing"
+                      className="menu-scroll"
+                      spy={true}
+                      smooth={true}
+                      duration={1000}
+                      exact="true"
+                      offset={-80}
+                    >
                       Pricing
-                    </a>
+                    </Link>
                   </li>
                   <li className="relative aG">
-                    <a href="#support" className="menu-scroll">
+                    <Link
+                      to="support"
+                      className="menu-scroll"
+                      spy={true}
+                      smooth={true}
+                      duration={1000}
+                      exact="true"
+                      offset={-80}
+                    >
                       Support
-                    </a>
+                    </Link>
                   </li>
                   <li className="relative submenu-item" onClick={ToggleSwitch}>
                     <a
@@ -119,14 +152,14 @@ const Header = () => {
                         { id: 6, text: "Sign Up Page", url: "register" },
                         { id: 7, text: "404 Page", url: "404" },
                       ].map((link) => (
-                        <Link
+                        <NavLink
                           key={link.id}
                           to={`${link.url}`}
                           className="sub-link"
                           onClick={ToggleSwitch}
                         >
                           {link.text}
-                        </Link>
+                        </NavLink>
                       ))}
                     </div>
                   </li>
@@ -134,7 +167,7 @@ const Header = () => {
               </nav>
             </div>
             <div className="flex justify-end items-center pr-16 lg:pr-0">
-              <Link
+              <NavLink
                 to="/register"
                 className="
                   hidden
@@ -146,8 +179,8 @@ const Header = () => {
                 "
               >
                 Sign In
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/register"
                 className="
                 hidden
@@ -167,7 +200,7 @@ const Header = () => {
                 "
               >
                 Sign Up
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>
