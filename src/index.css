@@ -33,14 +33,9 @@
     text-[rgba(74,108,247,var(--tw-text-opacity))];
   }
   .menu-scroll {
-    @apply text-base
-    hover:opacity-70
-    py-6
-    lg:py-6 lg:inline-flex lg:px-0
-    flex mx-8
-    lg:mr-0 lg:ml-8
-    xl:ml-12 cursor-pointer;
+    @apply text-base lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 xl:ml-12 text-[rgba(255,255,255,var(--tw-text-opacity))];
   }
+
   .arrow-forward {
     @apply block
     w-2
@@ -88,8 +83,7 @@ bg-[rgba(255,255,255,var(--tw-bg-opacity))];
     @apply absolute py-5
     lg:py-0 lg:px-4
     xl:px-6
-   bg-opacity-100
-bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+   bg-main-dark-bg
     lg:bg-transparent shadow
      rounded-lg max-w-[250px] w-full
     lg:max-w-full lg:w-full
@@ -100,8 +94,7 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
     @apply absolute py-5
     lg:py-0 lg:px-4
     xl:px-6
-   bg-opacity-100
-bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+   bg-main-dark-bg
     lg:bg-transparent
      rounded-lg max-w-[250px] w-full
     lg:max-w-full lg:w-full
@@ -120,7 +113,7 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
     lg:block lg:opacity-0 lg:invisible
     group-hover:opacity-10
     lg:group-hover:visible lg:group-hover:top-full
-     bg-opacity-100 bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+     bg-main-dark-bg
      duration-300;
   }
   .page-submenu-active {
@@ -132,7 +125,7 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
     lg:shadow
     p-4
     lg:block lg:opacity-100 lg:visible
-     bg-opacity-100 bg-[rgba(29,33,68,var(--tw-bg-opacity))]
+     bg-main-dark-bg
      duration-300;
   }
 
@@ -154,7 +147,7 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
     mr-4
     rounded-md
     py-2
-    bg-opacity-10 bg-[rgba(74,108,247,var(--tw-bg-opacity))]
+    bg-main-bg
     p-text-c
     hover:bg-opacity-100 hover:text-color-w;
   }
@@ -174,7 +167,7 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
   .input {
     @apply w-full border border-transparent
     bg-opacity-100
-  bg-[rgba(36,43,81,var(--tw-bg-opacity))]
+  bg-main-dark-bg
     rounded-md   
     py-3                    
     px-6
@@ -196,8 +189,8 @@ bg-[rgba(29,33,68,var(--tw-bg-opacity))]
     font-medium
     text-opacity-100
   text-[rgba(255,255,255,var(--tw-text-opacity))]
-    bg-opacity-100
-  bg-[rgba(74,108,247,var(--tw-bg-opacity))]
+  
+  bg-main-bg
     py-3
     px-9
     mb-4

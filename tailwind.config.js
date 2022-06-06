@@ -12,7 +12,12 @@ module.exports = {
 
       "2xl": "1320px",
     },
-    extend: {},
+    extend: {
+      backgroundColor: {
+        "main-bg": "#4a6cf7",
+        "main-dark-bg": "#242b51",
+      },
+    },
   },
   plugins: [],
 };
