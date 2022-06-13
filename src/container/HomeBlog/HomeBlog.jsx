@@ -15,7 +15,7 @@ const HomeBlog = () => {
         <Blog items={dataForDisplay} />
         <div className="flex items-center justify-center">
           <button type="button" className="btn">
-            <Link to="/blog"> View More</Link>
+            <Link to="/blog-grid"> View More</Link>
           </button>
         </div>
       </div>

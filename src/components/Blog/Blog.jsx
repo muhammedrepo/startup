@@ -47,7 +47,7 @@ const Blog = ({ items }) => {
             >
               <h3>
                 <Link
-                  to="/blog-detail"
+                  to={item.url}
                   className="
                         font-bold
                         text-xl
