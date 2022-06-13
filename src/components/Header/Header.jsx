@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
 import { Logo } from "../../components";
-import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Header = () => {
   const [switchToggled, setSwitchToggled] = useState(false);
@@ -57,99 +55,29 @@ const Header = () => {
               >
                 <ul className="lg:flex">
                   <li className="relative aG">
-                    <Link
-                      to="home"
-                      className="menu-scroll ml-8"
-                      spy={true}
-                      smooth={true}
-                      duration={1000}
-                      exact="true"
-                      offset={-80}
-                    >
+                    <NavLink to="/" className="menu-scroll">
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="relative">
-                    <Link
-                      to="about"
-                      className="menu-scroll"
-                      spy={true}
-                      smooth={true}
-                      duration={1000}
-                      exact="true"
-                      offset={-80}
-                    >
+                    <NavLink to="about" className="menu-scroll">
                       About
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="relative">
-                    <Link
-                      to="pricing"
-                      className="menu-scroll"
-                      spy={true}
-                      smooth={true}
-                      duration={1000}
-                      exact="true"
-                      offset={-80}
-                    >
-                      Pricing
-                    </Link>
+                    <NavLink to="service" className="menu-scroll">
+                      Services
+                    </NavLink>
                   </li>
                   <li className="relative">
-                    <Link
-                      to="support"
-                      className="menu-scroll"
-                      spy={true}
-                      smooth={true}
-                      duration={1000}
-                      exact="true"
-                      offset={-80}
-                    >
-                      Support
-                    </Link>
+                    <NavLink to="blog" className="menu-scroll">
+                      Blog
+                    </NavLink>
                   </li>
-                  <li className="relative submenu-item" onClick={ToggleSwitch}>
-                    <a
-                      href="#pages"
-                      className="
-                      menu-scroll flex items-center justify-center"
-                    >
-                      Pages
-                      <MdKeyboardArrowDown className="ml-1 text-2xl" />
-                    </a>
-                    <div
-                      className={
-                        switchToggled ? "page-submenu-active" : "page-submenu"
-                      }
-                    >
-                      {[
-                        { id: 1, text: "About Page", url: "about" },
-                        { id: 2, text: "Contact Page", url: "contact" },
-                        { id: 3, text: "Blog Grid Page", url: "blog" },
-                        {
-                          id: 4,
-                          text: "Blog Sidebar Page",
-                          url: "blog-sidebar",
-                        },
-                        {
-                          id: 5,
-                          text: "Blog Details Page",
-                          url: "blog-detail",
-                        },
-                        { id: 6, text: "Sign In Page", url: "register" },
-                        { id: 6, text: "Sign Up Page", url: "register" },
-                        { id: 7, text: "404 Page", url: "404" },
-                      ].map((link) => (
-                        <NavLink
-                          key={link.id}
-                          to={`${link.url}`}
-                          className="sub-link"
-                          onClick={ToggleSwitch}
-                        >
-                          {link.text}
-                        </NavLink>
-                      ))}
-                    </div>
+                  <li className="relative">
+                    <NavLink to="contact" className="menu-scroll">
+                      Contact
+                    </NavLink>
                   </li>
                 </ul>
               </nav>

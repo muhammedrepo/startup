@@ -12,15 +12,15 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="hero-content flex flex-col justify-center  items-center max-w-[570px] mx-auto">
                 <h1 className="mb-5 text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-5xl font-bold text-center">
-                  Startup Focused Tailwind CSS Template
+                  Startup Focused Multipurpose Template
                 </h1>
                 <p
                   className="max-w-[540px] text-xl md:text-xl font-medium mb-12 text-center 
     text-[rgba(255,255,255,var(--tw-text-opacity))] opacity-90"
                 >
-                  A Complete Tailwind CSS Web Template Crafted for - Startup,
-                  SaaS, Business, Software and Agencies. Comes with high-quality
-                  design and everything you need!
+                  Tuae nam ex similique incidunt expedita exerci tationem
+                  laudantium. Repellendus quisquam numquam perferendis earum
+                  sapiente non tempore!
                 </p>
                 <ul className="flex justify-center items-center">
                   <li>
