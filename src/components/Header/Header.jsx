@@ -70,7 +70,7 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li className="relative">
-                    <NavLink to="blog" className="menu-scroll">
+                    <NavLink to="blog-grid" className="menu-scroll">
                       Blog
                     </NavLink>
                   </li>

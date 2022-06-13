@@ -1,8 +1,8 @@
 import React from "react";
-import About from "../About/About";
-import Blog from "../Blog/Blog";
-import Features from "../Features/Features";
+
+import { About, Features } from "../../components";
 import Hero from "../Hero/Hero";
+import HomeBlog from "../HomeBlog/HomeBlog";
 import Pricing from "../Pricing/Pricing";
 import Support from "../Support/Support";
 import Testimonials from "../Testimonials/Testimonials";
@@ -17,7 +17,7 @@ const HomePage = () => {
       <About />
       <Testimonials />
       <Pricing />
-      <Blog />
+      <HomeBlog />
       <Support />
     </>
   );
