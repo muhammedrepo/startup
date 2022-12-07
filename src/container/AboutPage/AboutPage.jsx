@@ -1,5 +1,5 @@
-import React from "react";
-import { About, TopSection } from "../../components";
+import { TopSection } from "../../components";
+import About from "./About";
 
 const AboutPage = () => {
   return (

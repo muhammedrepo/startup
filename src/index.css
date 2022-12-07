@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply bg-opacity-100 bg-[rgba(9,14,52,var(--tw-bg-opacity))];
@@ -13,27 +17,27 @@
   h4,
   h5,
   h6 {
-    @apply text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))];
+    @apply text-white/100;
   }
 
   a {
-    @apply text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))];
+    @apply text-white/100;
   }
 
   p,
   .p-text-c {
-    @apply text-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))];
+    @apply text-gray-400/100;
+  }
+
+  .container {
+    @apply w-full mx-auto px-4;
   }
   .text-color-w {
-    @apply text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))];
+    @apply text-white/100;
   }
   .text-color-b {
     @apply text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))];
-  }
-  .menu-scroll {
-    @apply text-base lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 xl:ml-12 text-[rgba(255,255,255,var(--tw-text-opacity))];
+    text-[rgba(74,108,247,1)];
   }
 
   .arrow-forward {
@@ -42,26 +46,20 @@
     h-2
     border-t-2
     border-r-2
-    border-opacity-100
-border-[rgba(149,156,177,var(--tw-border-opacity))]
+border-[rgba(149,156,177,1)]
     rotate-45 transform
     mr-3;
   }
+
+  /* Header Styles */
+
   .bar {
     @apply relative
     w-[30px]
     h-0.5
     my-1.5
     block
-    bg-opacity-100
-bg-[rgba(255,255,255,var(--tw-bg-opacity))];
-  }
-
-  .sub-link {
-    @apply block text-sm rounded py-[10px] px-4
-    text-opacity-100
-  text-[rgba(255,255,255,var(--tw-text-opacity))]
-    hover:opacity-70;
+bg-white/100;
   }
 
   .navbarToggler {
@@ -102,32 +100,7 @@ bg-[rgba(255,255,255,var(--tw-bg-opacity))];
     lg:block lg:static;
   }
 
-  .page-submenu {
-    @apply hidden relative
-    lg:absolute
-    w-[250px] top-full
-    lg:top-[110%]
-    left-0 rounded-md
-    lg:shadow
-    p-4
-    lg:block lg:opacity-0 lg:invisible
-    group-hover:opacity-10
-    lg:group-hover:visible lg:group-hover:top-full
-     bg-main-dark-bg
-     duration-300;
-  }
-  .page-submenu-active {
-    @apply relative
-    lg:absolute
-    w-[250px] top-full
-    lg:top-[110%]
-    left-0 rounded-md
-    lg:shadow
-    p-4
-    lg:block lg:opacity-100 lg:visible
-     bg-main-dark-bg
-     duration-300;
-  }
+  /* Blog Styles */
 
   .blog-detail-list {
     @apply font-medium p-text-c text-base
@@ -158,7 +131,7 @@ bg-[rgba(255,255,255,var(--tw-bg-opacity))];
   .label {
     @apply block text-sm font-medium 
     
-  text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
+  text-opacity-100 text-white/100
     mb-3;
   }
 
@@ -172,13 +145,11 @@ bg-[rgba(255,255,255,var(--tw-bg-opacity))];
     py-3                    
     px-6
     text-base
-    
-    text-opacity-100
   text-[rgba(149,156,177,var(--tw-text-opacity))]                  
-    focus:border-opacity-100
-  focus:border-[rgba(74,108,247,var(--tw-border-opacity))];
+  focus:border-blue-500/100;
   }
 
+  /* Button Styles */
   .submit-btn,
   .subscribe-btn,
   .price-btn,
@@ -188,63 +159,19 @@ bg-[rgba(255,255,255,var(--tw-bg-opacity))];
     @apply text-base text-center
     font-medium
     text-opacity-100
-  text-[rgba(255,255,255,var(--tw-text-opacity))]
+  text-white/100
   
   bg-main-bg
     py-3
     px-9
     mb-4
-   
     cursor-pointer
-    border border-opacity-100
-    border-[rgba(74,108,247,var(--tw-border-opacity))]
+    border
+    border-blue-500/100
     hover:bg-opacity-80 hover:shadow
     rounded-md
     transition-all
     duration-300;
-  }
-}
-
-@layer utilities {
-  .mark-svg {
-    @apply w-[30px]
-    h-[30px]
-    flex
-    items-center
-    justify-center
-    rounded-md
-    flex-wrap
-    bg-opacity-100	
-    text-opacity-100
-text-[rgba(74,108,247,var(--tw-text-opacity))]
-    mr-4;
-  }
-
-  .about-lists {
-    @apply flex
-    items-center
-    text-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))]
-    text-lg
-    font-medium
-    mb-5;
-  }
-  .about-list-b {
-    @apply font-bold 
-    text-opacity-100 text-[rgba(255,255,255,var(--tw-text-opacity))]
-    text-xl
-    sm:text-2xl
-    lg:text-xl
-    xl:text-2xl
-    mb-4;
-  }
-
-  .about-list-p {
-    @apply text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] text-base
-                    sm:text-lg
-                    leading-5
-                    sm:leading-5
-                    font-medium;
   }
 }
 

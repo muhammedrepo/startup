@@ -1,6 +1,5 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import { images } from "../../constants";
+import { images } from "../constants";
 
 const Logo = ({ topBar }) => {
   return (

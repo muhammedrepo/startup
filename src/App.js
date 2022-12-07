@@ -1,35 +1,68 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Header, Footer } from "./components";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
-  BlogGrid,
-  Error,
-  Register,
-  Contact,
-  BlogSingle,
-  Services,
   AboutPage,
+  BlogGrid,
+  BlogSidebar,
+  BlogSingle,
+  Contact,
+  Error,
+  HomePage,
+  Register,
+  SignIn,
 } from "./container";
 
-import BlogSidebar from "./container/BlogSidebar/BlogSidebar";
-import HomePage from "./container/HomePage/HomePage";
+import { Layout } from "./layouts";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/blog-grid",
+        element: <BlogGrid />,
+      },
+      {
+        path: "/blog-sidebar",
+        element: <BlogSidebar />,
+      },
+      {
+        path: "/blog-details",
+        element: <BlogSingle />,
+      },
+      {
+        path: "/sign-in",
+        element: <SignIn />,
+      },
+      {
+        path: "/sign-up",
+        element: <Register />,
+      },
+      {
+        path: "/error",
+        element: <Error />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/service" element={<Services />} />
-        <Route path="/blog-grid" element={<BlogGrid />} />
-        <Route path="/blog-detail" element={<BlogSingle />} />
-        <Route path="/blog-sidebar" element={<BlogSidebar />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { FormRow } from "../../components";
+import { FormRow } from "../components";
 
 const Subscribe = () => {
   return (

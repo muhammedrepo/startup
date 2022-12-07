@@ -1,12 +1,12 @@
-import React from "react";
-
-import { About, Features } from "../../components";
-import Hero from "../Hero/Hero";
-import HomeBlog from "../HomeBlog/HomeBlog";
-import Pricing from "../Pricing/Pricing";
-import Support from "../Support/Support";
-import Testimonials from "../Testimonials/Testimonials";
-import VidSection from "../VidSection/VidSection";
+import Hero from "./Hero";
+import Features from "./Features";
+import VidSection from "./VidSection";
+import About from "../AboutPage/About";
+import HomeBlog from "./HomeBlog";
+import Pricing from "./Pricing";
+import Testimonials from "./Testimonials";
+import Support from "./Support";
+import { PartnerBrands } from "../../components";
 
 const HomePage = () => {
   return (
@@ -14,6 +14,7 @@ const HomePage = () => {
       <Hero />
       <Features />
       <VidSection />
+      <PartnerBrands />
       <About />
       <Testimonials />
       <Pricing />
