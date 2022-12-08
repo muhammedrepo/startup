@@ -7,15 +7,15 @@ const BlogSingle = () => {
       <ScrollToTop />
       <section className="pt-[150px] pb-[120px]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center -mx-4">
-            <div className="w-full lg:w-2/3 px-4">
+          <div className="-mx-4 flex flex-wrap justify-center">
+            <div className="w-full px-4 lg:w-2/3">
               <div>
                 <h2
                   className="
-                    font-bold 
+                    mb-8 
                     text-3xl
+                    font-bold
                     sm:text-4xl
-                    mb-8
                   "
                 >
                   10 amazing sites to download stock photos & digital assets for
@@ -23,26 +23,26 @@ const BlogSingle = () => {
                 </h2>
                 <div
                   className="
+                    mb-10
                     flex
                     flex-wrap
                     items-center
                     justify-between
-                    pb-4
-                    mb-10
                     border-b
-                    border-opacity-10 border-[rgba(255,255,255,var(--tw-border-opacity))]
+                    border-[rgba(255,255,255,var(--tw-border-opacity))]
+                    border-opacity-10 pb-4
                   "
                 >
                   <div className="flex flex-wrap items-center">
-                    <div className="flex items-center mr-10 mb-5">
+                    <div className="mr-10 mb-5 flex items-center">
                       <div
                         className="
-                          max-w-[40px]
-                          w-full
-                          h-[40px]
-                          rounded-full
-                          overflow-hidden
                           mr-4
+                          h-[40px]
+                          w-full
+                          max-w-[40px]
+                          overflow-hidden
+                          rounded-full
                         "
                       >
                         <img
@@ -54,28 +54,28 @@ const BlogSingle = () => {
                       <div className="w-full">
                         <h4
                           className="
-                            text-base font-medium p-text-c mb-1
+                            p-text-c mb-1 text-base font-medium
                           "
                         >
                           By
                           <a
                             href="#home"
-                            className="p-text-c ml-1 hover:text-color-b"
+                            className="p-text-c hover:text-color-b ml-1"
                           >
                             Musharof Chy
                           </a>
                         </h4>
                       </div>
                     </div>
-                    <div className="flex items-center mb-5">
+                    <div className="mb-5 flex items-center">
                       <p
                         className="
+                          p-text-c
+                          mr-5
                           flex
                           items-center
                           text-base
-                          p-text-c
                           font-medium
-                          mr-5
                         "
                       >
                         <span className="mr-3">
@@ -100,12 +100,12 @@ const BlogSingle = () => {
                       </p>
                       <p
                         className="
+                          p-text-c
+                          mr-5
                           flex
                           items-center
                           text-base
-                          p-text-c
                           font-medium
-                          mr-5
                         "
                       >
                         <span className="mr-3">
@@ -124,10 +124,10 @@ const BlogSingle = () => {
                       </p>
                       <p
                         className="
+                          p-text-c
                           flex
                           items-center
                           text-base
-                          p-text-c
                           font-medium
                         "
                       >
@@ -149,16 +149,16 @@ const BlogSingle = () => {
                   <div className="mb-5">
                     <span
                       className="
-                        bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        rounded-full
+                        text-color-w
                         inline-flex
                         items-center
                         justify-center
+                        overflow-hidden
+                        rounded-full
+                        bg-[rgba(74,108,247,var(--tw-bg-opacity))]
                         py-2
                         px-4
-                        overflow-hidden
                         text-sm
-                        text-color-w
                       "
                     >
                       Design
@@ -168,31 +168,31 @@ const BlogSingle = () => {
                 <div>
                   <p
                     className="
-                      font-medium p-text-c text-base
+                      p-text-c mb-10 text-base
+                      font-medium
                       sm:text-lg
                       lg:text-base
-                      xl:text-lg
-                       mb-10
+                       xl:text-lg
                     "
                   >
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occpx-4cat cupidatat.
                   </p>
-                  <div className="w-full rounded overflow-hidden mb-10">
+                  <div className="mb-10 w-full overflow-hidden rounded">
                     <img
                       src={images.blogDetail}
                       alt="blogDetail"
-                      className="w-full h-full object-center object-cover"
+                      className="h-full w-full object-cover object-center"
                     />
                   </div>
                   <p
                     className="
-                      font-medium p-text-c text-base
+                      p-text-c mb-8 text-base
+                      font-medium
                       sm:text-lg
                       lg:text-base
-                      xl:text-lg
-                       mb-8
+                       xl:text-lg
                     "
                   >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -206,11 +206,11 @@ const BlogSingle = () => {
                   </p>
                   <p
                     className="
-                      font-medium p-text-c text-base
+                      p-text-c mb-10 text-base
+                      font-medium
                       sm:text-lg
                       lg:text-base
-                      xl:text-lg
-                       mb-10
+                       xl:text-lg
                     "
                   >
                     Semper auctor neque vitpx-4 tempus quam pellentesque nec.
@@ -223,23 +223,23 @@ const BlogSingle = () => {
                   </p>
                   <h3
                     className="
+                      lg:a27
+                      mb-10
                       font-bold
                       sm:text-2xl
-                      lg:a27
-                      xl:text-2xl
                       
-                      mb-10
+                      xl:text-2xl
                     "
                   >
                     Digital marketplace for Ui/Ux designers.
                   </h3>
                   <p
                     className="
-                      font-medium p-text-c text-base
+                      p-text-c mb-10 text-base
+                      font-medium
                       sm:text-lg
                       lg:text-base
-                      xl:text-lg
-                       mb-10
+                       xl:text-lg
                     "
                   >
                     consectetur adipiscing elit in voluptate velit esse cillum
@@ -248,7 +248,7 @@ const BlogSingle = () => {
                   </p>
                   <ul
                     className="
-                      list-inside list-disc p-text-c mb-10
+                      p-text-c mb-10 list-inside list-disc
                     "
                   >
                     <li className="blog-detail-list">
@@ -266,22 +266,22 @@ const BlogSingle = () => {
                   </ul>
                   <div
                     className="
-                      rounded-md overflow-hidden p-8
+                      relative z-10 mb-10
+                      flex-wrap
+    overflow-hidden
+                      rounded-md
+                      bg-[rgba(74,108,247,var(--tw-bg-opacity))]
                       bg-opacity-100
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                      md:p-9
-                      lg:p-8
-                      xl:p-9
-                      flex-wrap bg-opacity-10 relative z-10 mb-10
+                      bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9
                     "
                   >
                     <p
                       className="
+                        p-text-c
                         text-center
                         text-base
-                        p-text-c
-                        italic
                         font-medium
+                        italic
                       "
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -432,22 +432,22 @@ const BlogSingle = () => {
                   </div>
                   <p
                     className="
-                      font-medium p-text-c text-base
+                      p-text-c mb-10 text-base
+                      font-medium
                       sm:text-lg
                       lg:text-base
-                      xl:text-lg
-                       mb-10
+                       xl:text-lg
                     "
                   >
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occpx-4cat
                     mattis vulputate cupidatat.
                   </p>
-                  <div className="sm:flex items-center justify-between">
+                  <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h5
                         className="
-                          font-medium p-text-c text-sm mb-3
+                          p-text-c mb-3 text-sm font-medium
                         "
                       >
                         Popular Tags :
@@ -482,9 +482,9 @@ const BlogSingle = () => {
                     <div className="mb-5">
                       <h5
                         className="
-                          font-medium p-text-c text-sm
+                          p-text-c mb-3 text-sm
+                          font-medium
                           sm:text-right
-                          mb-3
                         "
                       >
                         Share this post :
@@ -493,7 +493,7 @@ const BlogSingle = () => {
                         <a
                           href="#home"
                           className="
-                            blog-detail-social sm:ml-3 mr-0
+                            blog-detail-social mr-0 sm:ml-3
                           "
                         >
                           <svg
@@ -508,7 +508,7 @@ const BlogSingle = () => {
                         <a
                           href="#home"
                           className="
-                        blog-detail-social sm:ml-3 mr-0
+                        blog-detail-social mr-0 sm:ml-3
                           "
                         >
                           <svg
@@ -523,7 +523,7 @@ const BlogSingle = () => {
                         <a
                           href="#home"
                           className="
-                        blog-detail-social sm:ml-3 mr-0
+                        blog-detail-social mr-0 sm:ml-3
                           "
                         >
                           <svg

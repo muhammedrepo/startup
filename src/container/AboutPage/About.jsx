@@ -1,4 +1,3 @@
-import React from "react";
 import { images } from "../../constants";
 import { items, lists } from "./data";
 
@@ -18,7 +17,7 @@ const About = () => {
                   <h2
                     className="
                        mb-6
-                      text-3xl font-bold text-white/100
+                      text-3xl font-bold
                       sm:text-4xl md:text-4xl lg:text-2xl xl:text-4xl
                     "
                   >
@@ -38,8 +37,8 @@ const About = () => {
                         "
                       >
                         <span
-                          className="mr-4 flex h-7 w-7
-                      flex-wrap items-center justify-center  rounded-md bg-main-bg/10 text-main-bg/100"
+                          className="bg-main-bg/10 text-main-bg/100 mr-4 flex
+                      h-7 w-7 flex-wrap  items-center justify-center rounded-md"
                         >
                           <img src={images.mark} alt="mark" />
                         </span>
@@ -79,7 +78,7 @@ const About = () => {
               <div className="max-w-[470px]">
                 {items.map((item) => (
                   <div key={item.id} className="mb-9">
-                    <h3 className="mb-4 text-xl font-bold text-white/100 sm:text-2xl xl:text-2xl">
+                    <h3 className="mb-4 text-xl font-bold sm:text-2xl xl:text-2xl">
                       {item.title}
                     </h3>
                     <p className=" text-base font-medium sm:text-lg">

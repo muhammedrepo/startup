@@ -7,10 +7,13 @@ const FormRow = ({
   handleChange,
   labelText,
   placeholder,
+  noLabel,
 }) => {
   return (
     <div>
-      <label className="label">{labelText || name}</label>
+      <label className={noLabel ? "hidden" : "label block"}>
+        {labelText || name}
+      </label>
       <input
         type={type}
         value={values}

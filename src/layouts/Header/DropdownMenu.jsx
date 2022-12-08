@@ -16,7 +16,7 @@ function DropdownMenu() {
   }
   return (
     <div
-      className="relative top-full left-0 w-[250px] rounded-md bg-main-dark-bg p-4
+      className="bg-main-dark-bg relative top-full left-0 w-[250px] rounded-md p-4
     duration-300  lg:visible lg:absolute lg:top-[110%] lg:block lg:opacity-100 lg:shadow"
     >
       {pageLinks.map((page) => (

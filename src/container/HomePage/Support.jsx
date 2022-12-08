@@ -7,7 +7,7 @@ const Support = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-2/3">
             <div
-              className="mb-12 rounded-md bg-dark-blue p-11 sm:p-[55px]
+              className="bg-dark-blue mb-12 rounded-md p-11 sm:p-[55px]
                   lg:mb-5 lg:p-11 xl:p-[55px]"
             >
               <h2 className="mb-3 text-2xl font-bold sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -45,11 +45,11 @@ const Support = () => {
                         name="message"
                         rows="5"
                         placeholder="Enter your Message"
-                        className="w-full resize-none rounded-md
-                            border border-transparent
-                            bg-[rgba(36,43,81,1)] px-6 py-3 text-base
-                            text-gray outline outline-2
-                            outline-offset-2 outline-transparent focus:border-main-bg focus:border-opacity-100 focus-visible:shadow-sm
+                        className="text-gray focus:border-main-bg w-full
+                            resize-none rounded-md
+                            border border-transparent bg-[rgba(36,43,81,1)] px-6
+                            py-3 text-base outline
+                            outline-2 outline-offset-2 outline-transparent focus:border-opacity-100 focus-visible:shadow-sm
                           "
                       ></textarea>
                     </div>

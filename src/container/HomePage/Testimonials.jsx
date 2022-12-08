@@ -8,7 +8,7 @@ const stars = [images.star, images.star, images.star, images.star, images.star];
 
 const Testimonials = () => {
   return (
-    <section className="relative z-10 bg-main-bg/[3%] pt-[120px] pb-20">
+    <section className="bg-main-bg/[3%] relative z-10 pt-[120px] pb-20">
       <div className="container mx-auto px-4">
         <SectionTitle
           title="What Our Users Says"
@@ -33,7 +33,7 @@ const Testimonials = () => {
 const TestimonialItem = ({ item }) => {
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-8 rounded-md bg-dark-blue p-8 lg:px-5 xl:px-8">
+      <div className="bg-dark-blue mb-8 rounded-md p-8 lg:px-5 xl:px-8">
         <div className="mb-5 flex items-center">
           {stars.map((star, index) => (
             <span key={index} className="mr-1 block text-[rgba(251,176,64,1)]">
@@ -41,7 +41,7 @@ const TestimonialItem = ({ item }) => {
             </span>
           ))}
         </div>
-        <p className="mr-5 mb-8 border-b-2 border-gray/20 pb-8 text-base text-white/100">
+        <p className="border-gray/20 mr-5 mb-8 border-b-2 pb-8 text-base text-white/100">
           {item.description}
         </p>
         <div className="flex items-center">

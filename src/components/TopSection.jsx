@@ -3,28 +3,28 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const TopSection = ({ title, subtitle }) => {
   return (
-    <section className="relative z-10 pt-[150px] overflow-hidden">
+    <section className="relative z-10 overflow-hidden pt-[150px]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center -mx-4">
-          <div className="w-full md:w-2/3 lg:w-[58.333333%] px-4">
-            <div className="max-w-[570px] mb-3 md:mb-0">
+        <div className="-mx-4 flex flex-wrap items-center">
+          <div className="w-full px-4 md:w-2/3 lg:w-[58.333333%]">
+            <div className="mb-3 max-w-[570px] md:mb-0">
               <h1
                 className="
-                  font-bold a1A
-                  dark:text-white
-                  text-2xl
-                  sm:a1O
+                  a1A sm:a1O
                   mb-5
+                  text-2xl
+                  font-bold
+                  dark:text-white
                 "
               >
                 {title}
               </h1>
               <p
                 className="
-                  font-medium
-                  text-base
-                  text-[#959cb1]
                   a1U
+                  text-base
+                  font-medium
+                  text-[#959cb1]
                 "
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
@@ -33,14 +33,14 @@ const TopSection = ({ title, subtitle }) => {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/3 lg:w-2/5 px-4">
+          <div className="w-full px-4 md:w-1/3 lg:w-2/5">
             <div className="a2w">
               <ul className="flex items-center md:justify-end">
                 <li className="flex items-center">
                   <a
                     href="/"
                     className="
-                      font-medium text-base text-[#959cb1] pr-1
+                      pr-1 text-base font-medium text-[#959cb1]
                       hover:text-[#4a6cf7]
                     "
                   >
@@ -49,15 +49,15 @@ const TopSection = ({ title, subtitle }) => {
 
                   <MdOutlineKeyboardArrowRight
                     className="
-                      block
-                      w-6
-                      h-6              
                       mr-3
+                      block
+                      h-6              
+                      w-6
                       text-[#959cb1]
                     "
                   />
                 </li>
-                <li className="font-medium text-base text-[#4a6cf7]">
+                <li className="text-base font-medium text-[#4a6cf7]">
                   {subtitle}
                 </li>
               </ul>

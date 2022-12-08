@@ -1,15 +1,3 @@
-import { ReactComponent as Facebook } from "../../images/social-media/facebook.svg";
-import { ReactComponent as Twitter } from "../../images/social-media/twitter.svg";
-import { ReactComponent as YouTube } from "../../images/social-media/youtube.svg";
-import { ReactComponent as LinkedIn } from "../../images/social-media/linkedin.svg";
-
-export const socialIcon = [
-  { path: "facebook.com", icon: <Facebook /> },
-  { path: "twitter.com", icon: <Twitter /> },
-  { path: "youtube.com", icon: <YouTube /> },
-  { path: "linkedin.com", icon: <LinkedIn /> },
-];
-
 export const footerLinks = [
   {
     title: "Useful Links",

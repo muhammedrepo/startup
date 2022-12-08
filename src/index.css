@@ -60,17 +60,17 @@
   }
 
   .navbarCollapse {
-    @apply absolute right-4 top-full hidden
-        w-full max-w-[250px] rounded-lg bg-main-dark-bg
+    @apply bg-main-dark-bg absolute right-4 top-full
+        hidden w-full max-w-[250px] rounded-lg
          py-5 shadow lg:static
         lg:block lg:w-full
         lg:max-w-full lg:bg-transparent lg:py-0
         lg:px-4 xl:px-6;
   }
   .navbarCollapseActive {
-    @apply absolute right-4
-        top-full block w-full max-w-[250px]
-        rounded-lg bg-main-dark-bg py-5 lg:static
+    @apply bg-main-dark-bg absolute
+        right-4 top-full block w-full
+        max-w-[250px] rounded-lg py-5 lg:static
         lg:block lg:w-full
         lg:max-w-full lg:bg-transparent lg:py-0
         lg:px-4 xl:px-6;
@@ -83,12 +83,12 @@
   .hero-btn,
   .login-btn,
   .btn {
-    @apply mb-4 cursor-pointer
-     rounded-md
-     border
-   border-main-bg
+    @apply border-main-bg bg-main-bg
+     mb-4
+     cursor-pointer
+   rounded-md
    
-   bg-main-bg
+   border
      py-3
      px-9
      text-center
@@ -104,7 +104,7 @@
   /* Blog Styles */
 
   .blog-detail-list {
-    @apply p-text-c mb-2 text-base
+    @apply mb-2 text-base
       font-medium
       sm:text-lg
       lg:text-base
@@ -113,17 +113,16 @@
 
   .blog-detail-tag,
   .blog-detail-social {
-    @apply p-text-c
-      p-text-c
-      /* hover:text-color-w */
+    @apply bg-main-bg/10
+      hover:bg-main-bg/100
+      text-gray
+      fill-gray
       mr-4
       inline-flex
       items-center
       justify-center
       rounded-md
-      bg-main-bg
-      px-4
-      py-2 hover:bg-opacity-100;
+      px-4 py-2;
   }
 
   /* Form Styles */
@@ -139,14 +138,10 @@
   .name-input,
   .email-input,
   .input {
-    @apply w-full rounded-md border
-    border-transparent
-    bg-[rgba(36,43,81,1)]
-    py-3                      
-    px-6
-    text-base
-  text-gray                  
-  focus:border-main-bg;
+    @apply text-gray focus:border-main-bg mr-5 w-full
+    rounded-md border border-transparent  bg-[rgba(36,43,81,1)]
+    py-3 px-5                  
+  text-base font-medium outline outline-2 outline-offset-2 outline-transparent;
   }
 }
 

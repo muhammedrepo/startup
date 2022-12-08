@@ -34,26 +34,26 @@ const Register = () => {
   return (
     <>
       <ScrollToTop />
-      <section className="relative z-10 pt-[180px] mb-[120px]">
+      <section className="relative z-10 mb-[120px] pt-[180px]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap -mx-4">
+          <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div
                 className="
-                max-w-[500px] mx-auto
-                bg-opacity-100
+                mx-auto max-w-[500px]
+                rounded-md
               bg-[rgba(29,33,68,var(--tw-bg-opacity))]
-                rounded-md p-12
-                sm:p-[60px] shadow
+                bg-opacity-100 p-12
+                shadow sm:p-[60px]
               "
               >
                 <h3
                   className="
-                  font-bold a1A
+                  a1A mb-3
                   
+                  text-center
                   text-2xl
-                  sm:text-3xl
-                  mb-3 text-center
+                  font-bold sm:text-3xl
                 "
                 >
                   {values.isMemeber
@@ -62,11 +62,11 @@ const Register = () => {
                 </h3>
                 <p
                   className="
-                  font-medium
-                  text-base
-                  
                   mb-11
                   text-center
+                  
+                  text-base
+                  font-medium
                 "
                 >
                   {values.isMemeber
@@ -75,9 +75,9 @@ const Register = () => {
                 </p>
                 {showAlert && <Alert />}
                 <button
-                  className="login-btn w-full flex items-center justify-center mb-6 bg-opacity-100
-    bg-[rgba(36,43,81,var(--tw-bg-opacity))] border-[rgba(36,43,81,var(--tw-border-opacity))] text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))]             
+                  className="login-btn mb-6 flex w-full items-center justify-center border-[rgba(36,43,81,var(--tw-border-opacity))]
+    bg-[rgba(36,43,81,var(--tw-bg-opacity))] bg-opacity-100 text-[rgba(149,156,177,var(--tw-text-opacity))]
+    text-opacity-100             
                 "
                 >
                   <span className="mr-3">
@@ -115,13 +115,13 @@ const Register = () => {
                   </span>
                   Sign in with Google
                 </button>
-                <div className="flex items-center justify-center mb-8">
+                <div className="mb-8 flex items-center justify-center">
                   <span
                     className="
                     hidden
-                    sm:block
-                    max-w-[70px] w-full h-[1px] bg-opacity-100
-    bg-[rgba(149,156,177,var(--tw-bg-opacity))]
+                    h-[1px]
+                    w-full max-w-[70px] bg-[rgba(149,156,177,var(--tw-bg-opacity))] bg-opacity-100
+    sm:block
                   "
                   ></span>
                   <p
@@ -140,9 +140,9 @@ const Register = () => {
                   <span
                     className="
                     hidden
-                    sm:block
-                    max-w-[70px] w-full h-[1px] bg-opacity-100
-                  bg-[rgba(149,156,177,var(--tw-bg-opacity))]
+                    h-[1px]
+                    w-full max-w-[70px] bg-[rgba(149,156,177,var(--tw-bg-opacity))] bg-opacity-100
+                  sm:block
                   "
                   ></span>
                 </div>
@@ -177,32 +177,32 @@ const Register = () => {
                       placeholder="Enter your password"
                     />
                   </div>
-                  <div className="flex items-center justify-between mb-8">
+                  <div className="mb-8 flex items-center justify-between">
                     <div>
                       <label
                         for="checkboxLabel"
-                        className="label flex items-center cursor-pointer select-none text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))]
+                        className="label flex cursor-pointer select-none items-center text-[rgba(149,156,177,var(--tw-text-opacity))]
+    text-opacity-100
                       "
                       >
                         <div className="relative">
                           <input
                             type="checkbox"
                             id="checkboxLabel"
-                            className="absolute w-[1px] h-[1px] p-0 -m-[1px] overflow-hidden whitespace-nowrap border-0 bg-clip-padding"
+                            className="absolute -m-[1px] h-[1px] w-[1px] overflow-hidden whitespace-nowrap border-0 bg-clip-padding p-0"
                           />
                           <div
                             className="
                             box
+                            mr-4
                             flex
+                            h-5
+                            w-5
                             items-center
                             justify-center
-                            w-5
-                            h-5
-                            rounded
-                            border 
-                          border-[rgba(255,255,255,var(--tw-border-opacity))] border-opacity-10
-                            mr-4
+                            rounded 
+                          border border-[rgba(255,255,255,var(--tw-border-opacity))]
+                            border-opacity-10
                           "
                           >
                             <span className="opacity-0">
@@ -266,7 +266,7 @@ const Register = () => {
                   <div className="mb-6">
                     <button
                       type="submit"
-                      className="submit-btn w-full flex items-center justify-center"
+                      className="submit-btn flex w-full items-center justify-center"
                     >
                       {values.isMemeber ? "Sign in" : "Sign up"}
                     </button>
@@ -279,8 +279,8 @@ const Register = () => {
                   <button
                     type="button"
                     onClick={toggleMember}
-                    className="text-color-b font-medium
-                        hover:underline ml-2"
+                    className="text-color-b ml-2
+                        font-medium hover:underline"
                   >
                     {values.isMemeber ? "Sign up" : "Sign in"}
                   </button>

@@ -35,8 +35,8 @@ const Pricing = () => {
                       borderWidth: 0,
                     }}
                   />
-                  <div className="h-5 w-[3.5rem] rounded-full bg-dark-blue shadow-sm"></div>
-                  <div className="absolute left-0 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-main-bg">
+                  <div className="bg-dark-blue h-5 w-[3.5rem] rounded-full shadow-sm"></div>
+                  <div className="bg-main-bg absolute left-0 -top-1 flex h-7 w-7 items-center justify-center rounded-full">
                     <span className="active h-4 w-4 rounded-full bg-white"></span>
                   </div>
                 </div>
@@ -56,8 +56,8 @@ const Pricing = () => {
           {pricingData.map((item) => (
             <div className="w-full px-4 md:w-1/2 lg:w-1/3" key={item.id}>
               <div
-                className="aw a1n relative z-10 mb-10
-                  rounded-md bg-dark-blue px-8 py-10"
+                className="aw a1n bg-dark-blue relative z-10
+                  mb-10 rounded-md px-8 py-10"
               >
                 <div className="flex items-center justify-between">
                   <h3 className="price mb-2 text-3xl font-bold">
@@ -67,7 +67,7 @@ const Pricing = () => {
                   <h4 className="mb-2 text-xl font-bold">{item.category}</h4>
                 </div>
                 <p className="mb-7 text-base">{item.desc}</p>
-                <div className="mb-8 border-b border-gray/30 pb-8">
+                <div className="border-gray/30 mb-8 border-b pb-8">
                   <a
                     href="#home"
                     className="price-btn flex w-full items-center justify-center"
@@ -80,9 +80,9 @@ const Pricing = () => {
                   {item.lists.map((list, index) => (
                     <div key={index} className="mb-3 flex items-center">
                       <span
-                        className=" mr-3 flex h-[18px] w-full max-w-[18px]
-                        items-center justify-center rounded-full bg-main-bg/10
-                        fill-main-bg
+                        className=" bg-main-bg/10 fill-main-bg mr-3 flex h-[18px]
+                        w-full max-w-[18px] items-center justify-center
+                        rounded-full
                         
                       "
                       >

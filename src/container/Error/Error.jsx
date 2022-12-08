@@ -8,12 +8,12 @@ const Error = () => {
       <ScrollToTop />
       <section className="relative z-10 pt-[180px] pb-[120px]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap -mx-4">
+          <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="max-w-[530px] mx-auto text-center">
+              <div className="mx-auto max-w-[530px] text-center">
                 <div className="mx-auto mb-9 text-center">
                   <svg
-                    className="w-full mx-auto text-center"
+                    className="mx-auto w-full text-center"
                     height="210"
                     viewBox="0 0 474 210"
                     fill="none"
@@ -141,20 +141,20 @@ const Error = () => {
                 </div>
                 <h3
                   className="
-                  font-bold a1A
+                  a1A mb-4
                   text-3xl
+                  font-bold
                   sm:text-4xl
-                  mb-4
                 "
                 >
                   Sorry, the page can’t be found
                 </h3>
                 <p
                   className="
-                  sm:text-lg
+                  mb-10
                   leading-6
                   
-                 mb-10
+                 sm:text-lg
                 "
                 >
                   The page you were looking for appears to have been moved,
@@ -169,9 +169,9 @@ const Error = () => {
         </div>
         <div
           className="
-          hidden
-          sm:block
-          absolute left-0 bottom-0 -z-[1]
+          absolute
+          left-0
+          bottom-0 -z-[1] hidden sm:block
         "
         >
           <svg
@@ -359,7 +359,7 @@ const Error = () => {
             </defs>
           </svg>
         </div>
-        <div className="hidden sm:block absolute top-0 right-0 -z-[1]">
+        <div className="absolute top-0 right-0 -z-[1] hidden sm:block">
           <svg
             width="406"
             height="286"

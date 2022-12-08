@@ -26,8 +26,8 @@ function FeatureItem({ feature }) {
     <div className="w-full px-4 md:w-1/2 lg:w-1/3" key={feature.id}>
       <div className="mb-[70px]">
         <div
-          className="mb-10 flex h-[70px] w-[70px] items-center
-                    justify-center  rounded-md bg-main-bg/10
+          className="bg-main-bg/10 mb-10 flex h-[70px] w-[70px]
+                    items-center  justify-center rounded-md
                   "
         >
           <img src={feature.icon} alt="" className="fill-current" />

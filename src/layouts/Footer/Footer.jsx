@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { images } from "../../constants";
-import { footerLinks, socialIcon } from "./data";
+import { images, socialIcon } from "../../constants";
+import { footerLinks } from "./data";
 import { ReactComponent as FooterImage } from "../../images/footer/footerImage.svg";
 import { ReactComponent as FooterImageTwo } from "../../images/footer/footerImage2.svg";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 bg-main-bg/5 pt-[100px]">
+    <footer className="bg-main-bg/5 relative z-10 pt-[100px]">
       <div className="container">
         <div className=" flex flex-wrap">
           <div className="w-full px-4 md:w-1/2 lg:w-1/3 xl:w-[41.666667%]">
@@ -25,7 +25,7 @@ const Footer = () => {
                     key={index}
                     to={item.path}
                     aria-label="social-link"
-                    className="mr-6 fill-light-blue hover:fill-main-bg"
+                    className="fill-light-blue hover:fill-main-bg mr-6"
                   >
                     {item.icon}
                   </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                       <li>
                         <a
                           href={link.url}
-                          className="mb-4 inline-block text-base font-medium text-gray  hover:text-main-bg"
+                          className="text-gray hover:text-main-bg mb-4 inline-block text-base  font-medium"
                         >
                           {link.name}
                         </a>

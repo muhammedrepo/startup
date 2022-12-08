@@ -9,19 +9,19 @@ const Hero = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="flex flex-col justify-center  items-center max-w-[570px] mx-auto">
-                <h1 className="mb-5 text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-bold text-center">
+              <div className="mx-auto flex max-w-[570px]  flex-col items-center justify-center">
+                <h1 className="mb-5 text-center text-3xl font-bold sm:text-4xl md:text-5xl xl:text-5xl">
                   Startup Focused Multipurpose Template
                 </h1>
                 <p
-                  className="max-w-[540px] text-xl md:text-xl font-medium mb-12 text-center 
-    text-white/100"
+                  className="mb-12 max-w-[540px] text-center text-xl font-medium text-white/100 
+    md:text-xl"
                 >
                   Tuae nam ex similique incidunt expedita exerci tationem
                   laudantium. Repellendus quisquam numquam perferendis earum
                   sapiente non tempore!
                 </p>
-                <ul className="flex justify-center items-center">
+                <ul className="flex items-center justify-center">
                   <li>
                     <Link to="sign-up" className="hero-btn mx-2 py-4">
                       Get Started
@@ -30,7 +30,7 @@ const Hero = () => {
                   <li>
                     <Link
                       to="sign-up"
-                      className="hero-btn bg-white/10 hover:bg-white/20 mx-2 border-white/10 py-4"
+                      className="hero-btn mx-2 border-white/10 bg-white/10 py-4 hover:bg-white/20"
                     >
                       Learn More
                     </Link>

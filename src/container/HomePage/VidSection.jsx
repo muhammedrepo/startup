@@ -31,9 +31,9 @@ const VidSection = () => {
                   <a
                     href={`${images.video}`}
                     className="
-                      flex h-[70px]
-                      w-[70px] items-center justify-center rounded-full
-                      bg-white/75 text-main-bg
+                      text-main-bg flex
+                      h-[70px] w-[70px] items-center justify-center
+                      rounded-full bg-white/75
                       transition-all hover:bg-white/100
                     "
                   >

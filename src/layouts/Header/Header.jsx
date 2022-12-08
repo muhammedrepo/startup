@@ -26,7 +26,7 @@ const Header = () => {
     <header
       className={`top-0 left-0 z-40 flex w-full items-center ${
         topBarScroll
-          ? "sticky bg-main-bg/20 shadow backdrop-blur-sm transition-all duration-300"
+          ? "bg-main-bg/20 sticky shadow backdrop-blur-sm transition-all duration-300"
           : "absolute bg-transparent"
       }`}
     >

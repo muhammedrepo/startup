@@ -34,7 +34,7 @@ export const ScrollToTop = () => {
       onClick={scrollToTop}
       className={classNames(
         isVisible ? "opacity-100" : "opacity-0",
-        `fixed bottom-8 right-8 left-auto z-50 h-10 w-10 items-center justify-center rounded-md bg-main-bg/100 text-white shadow-sm transition-all duration-300`
+        `bg-main-bg/100 fixed bottom-8 right-8 left-auto z-50 h-10 w-10 items-center justify-center rounded-md text-white shadow-sm transition-all duration-300`
       )}
       style={{ display: "flex" }}
     >
