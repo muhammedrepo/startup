@@ -6,8 +6,8 @@ function DropdownMenu() {
     return (
       <a
         href={props.path}
-        className="block text-sm rounded py-[10px] px-4
-      text-white/100
+        className="block rounded py-[10px] px-4 text-sm
+      text-white
         hover:opacity-70"
       >
         {props.title} {props.icon}
@@ -16,8 +16,8 @@ function DropdownMenu() {
   }
   return (
     <div
-      className="relative lg:absolute w-[250px] top-full lg:top-[110%] left-0 rounded-md
-    lg:shadow  p-4 lg:block lg:opacity-100 lg:visible bg-main-dark-bg duration-300"
+      className="relative top-full left-0 w-[250px] rounded-md bg-main-dark-bg p-4
+    duration-300  lg:visible lg:absolute lg:top-[110%] lg:block lg:opacity-100 lg:shadow"
     >
       {pageLinks.map((page) => (
         <DropdownItem path={page.path} title={page.title} />

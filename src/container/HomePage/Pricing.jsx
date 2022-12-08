@@ -1,7 +1,8 @@
-import React from "react";
 import { SectionTitle } from "../../components";
 import { pricingData } from "../../constants/pricingData";
-
+import { ReactComponent as CardImage } from "../../images/svg/pricingCard.svg";
+import { ReactComponent as MarkIcon } from "../../images/svg/mark.svg";
+import { ReactComponent as PricingBG } from "../../images/svg/pricingBG.svg";
 const Pricing = () => {
   return (
     <section id="pricing" className="relative z-10 pt-[120px] pb-20">
@@ -10,76 +11,39 @@ const Pricing = () => {
           title="Simple and Affordable Pricing"
           desc="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
         />
-        <div className="flex flex-wrap -mx-4">
+        <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="flex justify-center mb-16">
+            <div className="mb-16 flex justify-center">
               <span
-                className="
-                    a1h
-                    text-opacity-100
-                  text-[rgba(255,255,255,var(--tw-text-opacity))]
-                    text-base font-semibold mr-4
-                    monthly
-                    cursor-pointer
-                  "
+                className="a1hv monthly mr-4 cursor-pointer text-base font-semibold
+                    text-white"
               >
                 Monthly
               </span>
               <label
                 for="togglePlan"
-                className="flex items-center cursor-pointer"
+                className="flex cursor-pointer items-center"
               >
                 <div className="relative">
                   <input
                     id="togglePlan"
                     type="checkbox"
-                    className="absolute w-[1px] h-[1px] p-0 -m-[1px] overflow-hidden"
+                    className="absolute -m-[1px] h-[1px] w-[1px] overflow-hidden p-0"
                     style={{
                       clip: "rect(0,0,0,0)",
                       whiteSpace: "nowrap",
                       borderWidth: 0,
                     }}
                   />
-                  <div
-                    className="
-                        w-[3.5rem]
-                        h-5
-                        bg-opacity-100
-    bg-[rgba(29,33,68,var(--tw-bg-opacity))]
-                        rounded-full
-                        a3Y
-                      "
-                  ></div>
-                  <div
-                    className="
-                        dot
-                        absolute
-                        a2r
-                        a3Z
-                        a1k
-                        a1w
-                        a3_
-                        a5
-                        a12[-4px]
-                        a1p
-                        a8
-                        a9
-                        a1x
-                      "
-                  >
-                    <span className="active a20 a40 a1w aw"></span>
+                  <div className="h-5 w-[3.5rem] rounded-full bg-dark-blue shadow-sm"></div>
+                  <div className="absolute left-0 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-main-bg">
+                    <span className="active h-4 w-4 rounded-full bg-white"></span>
                   </div>
                 </div>
               </label>
               <span
-                className="
-                    a1h
-                    text-opacity-100
-    text-[rgba(255,255,255,var(--tw-text-opacity))]
-                text-base font-semibold ml-4
-                    yearly
-                    cursor-pointer
-                  "
+                className="yearly ml-4 cursor-pointer text-base font-semibold
+                    text-white"
               >
                 Yearly
               </span>
@@ -88,288 +52,63 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Card */}
-        <div className="flex flex-wrap -mx-4">
-          {pricingData.map((item, index) => (
-            <div className="w-full md:w-1/2 lg:w-1/3 px-4" key={index}>
+        <div className="-mx-4 flex flex-wrap">
+          {pricingData.map((item) => (
+            <div className="w-full px-4 md:w-1/2 lg:w-1/3" key={item.id}>
               <div
-                className="
-                  relative z-10 aw
-                  bg-opacity-100
-    bg-[rgba(29,33,68,var(--tw-bg-opacity))]
-                  a1n px-8 py-10 rounded-md mb-10               
-                "
+                className="aw a1n relative z-10 mb-10
+                  rounded-md bg-dark-blue px-8 py-10"
               >
-                <div className="flex justify-between items-center">
-                  <h3
-                    className="
-                      font-bold a1A
-                       
-                      text-3xl mb-2
-                      price
-                    "
-                  >
+                <div className="flex items-center justify-between">
+                  <h3 className="price mb-2 text-3xl font-bold">
                     $<span className="amount">{item.price}</span>
-                    <span
-                      className="a1h text-opacity-100
-    text-[rgba(149,156,177,var(--tw-text-opacity))] time"
-                    >
-                      /mo
-                    </span>
+                    <span className="time text-gray ">/mo</span>
                   </h3>
-                  <h4 className="font-bold text-xl mb-2">{item.category}</h4>
+                  <h4 className="mb-2 text-xl font-bold">{item.category}</h4>
                 </div>
-                <p className="text-base mb-7">{item.desc}</p>
-                <div
-                  className="
-                    border-b
-                  border-[rgba(149,156,177,var(--tw-border-opacity))]
-                    border-opacity-10
-                    border-[rgba(255,255,255,var(--tw-border-opacity))]
-                    pb-8 mb-8
-                  "
-                >
+                <p className="mb-7 text-base">{item.desc}</p>
+                <div className="mb-8 border-b border-gray/30 pb-8">
                   <a
                     href="#home"
-                    className="price-btn flex items-center justify-center w-full"
+                    className="price-btn flex w-full items-center justify-center"
                   >
                     Start Free Trial
                   </a>
                 </div>
 
                 <div>
-                  <div className="flex items-center mb-3">
-                    <span
-                      className="
-                    bg-opacity-100
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        bg-opacity-10
-                        text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]
-                        max-w-[18px]
-                        w-full
-                        h-[18px]
-                        mr-3
-                        flex
-                        items-center
-                        justify-center
-                        rounded-full
-                      "
-                    >
-                      {item.xicon}
-                    </span>
-                    <p
-                      className="
-                        text-base font-medium m-0
-                      "
-                    >
-                      {item.x1}
-                    </p>
-                  </div>
-                  <div className="flex items-center mb-3">
-                    <span
-                      className="
-                        bg-opacity-100
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        bg-opacity-10
-                        text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]
-                        max-w-[18px]
-                        w-full
-                        h-[18px]
-                        mr-3
-                        flex
-                        items-center
-                        justify-center
-                        rounded-full
-                      "
-                    >
-                      {item.xicon}
-                    </span>
-                    <p
-                      className="
-                    text-base font-medium m-0
-                      "
-                    >
-                      {item.x2}
-                    </p>
-                  </div>
-                  <div className="flex items-center mb-3">
-                    <span
-                      className="
-                        bg-opacity-100
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        bg-opacity-10
-                        text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]
-                        max-w-[18px]
-                        w-full
-                        h-[18px]
-                        mr-3
-                        flex
-                        items-center
-                        justify-center
-                        rounded-full
-                      "
-                    >
-                      {item.xicon}
-                    </span>
-                    <p
-                      className="
-                    text-base font-medium m-0
-                      "
-                    >
-                      {item.x3}
-                    </p>
-                  </div>
-                  <div className="flex items-center mb-3">
-                    <span
-                      className="
-                       
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        bg-opacity-10
-                        text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]
-                        max-w-[18px]
-                        w-full
-                        h-[18px]
-                        mr-3
-                        flex
-                        items-center
-                        justify-center
-                        rounded-full
-                      "
-                    >
-                      {item.xicon}
-                    </span>
-                    <p
-                      className="
-                        text-base font-medium m-0
-                      "
-                    >
-                      {item.x4}
-                    </p>
-                  </div>
-                  <div className="flex items-center mb-3">
-                    <span
-                      className="
+                  {item.lists.map((list, index) => (
+                    <div key={index} className="mb-3 flex items-center">
+                      <span
+                        className=" mr-3 flex h-[18px] w-full max-w-[18px]
+                        items-center justify-center rounded-full bg-main-bg/10
+                        fill-main-bg
                         
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        bg-opacity-10
-                        text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]
-                        max-w-[18px]
-                        w-full
-                        h-[18px]
-                        mr-3
-                        flex
-                        items-center
-                        justify-center
-                        rounded-full
                       "
-                    >
-                      {item.xicon}
-                    </span>
-                    <p
-                      className="
-                        text-base font-medium m-0
+                      >
+                        <MarkIcon />
+                      </span>
+                      <p
+                        className="
+                        m-0 text-base font-medium
                       "
-                    >
-                      {item.x5}
-                    </p>
-                  </div>
-                  <div className="flex items-center">
-                    <span
-                      className="
-                        bg-opacity-100
-    bg-[rgba(74,108,247,var(--tw-bg-opacity))]
-                        bg-opacity-10
-                        text-opacity-100
-    text-[rgba(74,108,247,var(--tw-text-opacity))]
-                        max-w-[18px]
-                        w-full
-                        h-[18px]
-                        mr-3
-                        flex
-                        items-center
-                        justify-center
-                        rounded-full
-                      "
-                    >
-                      {item.xicon}
-                    </span>
-                    <p
-                      className="
-                        text-base font-medium a45
-                      "
-                    >
-                      {item.x6}
-                    </p>
-                  </div>
+                      >
+                        {list}
+                      </p>
+                    </div>
+                  ))}
                 </div>
                 <div className="absolute bottom-0  right-0 -z-[1]">
-                  {item.icon}
+                  <CardImage />
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* End Pricing Card */}
       </div>
 
       <div className="absolute left-0 bottom-0 -z-[1]">
-        <svg
-          width="239"
-          height="601"
-          viewBox="0 0 239 601"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            opacity="0.3"
-            x="-184.451"
-            y="600.973"
-            width="196"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
-          />
-          <rect
-            opacity="0.3"
-            x="-188.201"
-            y="385.272"
-            width="59.7544"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_93:235"
-              x1="-90.1184"
-              y1="420.414"
-              x2="-90.1184"
-              y2="1131.65"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#4A6CF7" />
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_93:235"
-              x1="-159.441"
-              y1="204.714"
-              x2="-159.441"
-              y2="915.952"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#4A6CF7" />
-              <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+        <PricingBG />
       </div>
     </section>
   );

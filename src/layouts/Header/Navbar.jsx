@@ -33,7 +33,7 @@ function NavItem(props) {
     <li className="relative cursor-pointer">
       <a
         href={props.title === "Home" ? props.path : props.id}
-        className="ml-8 text-base text-white/100 lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 xl:ml-12"
+        className="ml-8 text-base text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 xl:ml-12"
         onClick={() => setOpen(!open)}
       >
         <span className="mx-8 flex lg:mx-0">

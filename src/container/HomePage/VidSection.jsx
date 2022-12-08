@@ -10,7 +10,7 @@ const VidSection = () => {
           title="We are ready to help"
           desc="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
         />
-        <div className="flex flex-wrap -mx-4">
+        <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
               className="
@@ -20,22 +20,21 @@ const VidSection = () => {
                 <img
                   src={images.vidPic}
                   alt="videoPic"
-                  className="w-full h-full object-cover object-center"
+                  className="h-full w-full object-cover object-center"
                 />
                 <div
                   className="
-                    absolute w-full h-full top-0
-                    right-0 flex items-center justify-center
+                    absolute top-0 right-0 flex
+                    h-full w-full items-center justify-center
                   "
                 >
                   <a
                     href={`${images.video}`}
                     className="
-                      glightbox
-                      w-[70px] h-[70px]
-                      rounded-full flex items-center justify-center
-                      bg-opacity-75 bg-white text-blue-500/100
-                      hover:bg-opacity-100 transition-all
+                      flex h-[70px]
+                      w-[70px] items-center justify-center rounded-full
+                      bg-white/75 text-main-bg
+                      transition-all hover:bg-white/100
                     "
                   >
                     <img src={images.play} alt="" />

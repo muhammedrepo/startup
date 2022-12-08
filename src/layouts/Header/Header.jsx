@@ -24,16 +24,16 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 left-0 z-40 w-full flex items-center ${
+      className={`top-0 left-0 z-40 flex w-full items-center ${
         topBarScroll
-          ? "sticky bg-main-bg/20 backdrop-blur-sm shadow transition-all duration-300"
+          ? "sticky bg-main-bg/20 shadow backdrop-blur-sm transition-all duration-300"
           : "absolute bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex -mx-4 items-center justify-between relative">
+        <div className="relative -mx-4 flex items-center justify-between">
           <Logo topBar={topBarScroll} />
-          <div className="flex px-4 justify-between items-center w-full">
+          <div className="flex w-full items-center justify-between px-4">
             <div>
               <button
                 onClick={ToggleSwitch}
@@ -50,14 +50,14 @@ const Header = () => {
               </button>
               <Navbar switchToggled={switchToggled} />
             </div>
-            <div className="flex justify-end items-center pr-16 lg:pr-0">
+            <div className="flex items-center justify-end pr-16 lg:pr-0">
               <NavLink
                 to="/sign-in"
-                className="hidden md:block text-base font-bold hover:opacity-70 py-3 px-7"
+                className="hidden py-3 px-7 text-base font-bold hover:opacity-70 md:block"
               >
                 Sign In
               </NavLink>
-              <NavLink to="/sign-up" className="btn hidden md:block md:mt-4">
+              <NavLink to="/sign-up" className="btn hidden md:mt-4 md:block">
                 Sign Up
               </NavLink>
             </div>

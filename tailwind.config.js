@@ -12,12 +12,16 @@ module.exports = {
 
       "2xl": "1320px",
     },
-    extend: {
-      backgroundColor: {
-        "main-bg": "#4a6cf7",
-        "main-dark-bg": "#242b51",
-      },
+    colors: {
+      white: "rgba(255, 255, 255, 1)",
+      gray: "rgba(149, 156, 177, 1)",
+      transparent: "transparent",
+      "light-blue": "rgba(206,211,246,1)",
+      "main-bg": "rgba(74, 108, 247, 1)",
+      "dark-blue": "rgba(29,33,68,1)",
+      "main-dark-bg": "rgba(9, 14, 52, 1)",
     },
+    extend: {},
   },
   plugins: [],
 };

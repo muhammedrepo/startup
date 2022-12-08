@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <section id="about" className="pt-[120px]">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div
             className="
               mr-5 border-b border-opacity-[.15] pb-[100px]
@@ -24,12 +24,7 @@ const About = () => {
                   >
                     Crafted for Startup, SaaS and Business Sites.
                   </h2>
-                  <p
-                    className="
-                      mb-11 text-base font-medium
-                      leading-7 sm:text-lg sm:leading-7
-                    "
-                  >
+                  <p className="mb-11 text-base font-medium sm:text-lg">
                     The main ‘thrust’ is to focus on educating attendees on how
                     to best protect highly vulnerable business applications with
                     interactive panel discussions and roundtables.
@@ -44,7 +39,7 @@ const About = () => {
                       >
                         <span
                           className="mr-4 flex h-7 w-7
-                      flex-wrap items-center justify-center  rounded-md bg-blue-500/10 text-blue-500/100"
+                      flex-wrap items-center justify-center  rounded-md bg-main-bg/10 text-main-bg/100"
                         >
                           <img src={images.mark} alt="mark" />
                         </span>
@@ -69,7 +64,7 @@ const About = () => {
       </section>
 
       <section className="pt-[100px] pb-[120px]">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <div className=" mb-12 text-center lg:mb-0 lg:text-left">
