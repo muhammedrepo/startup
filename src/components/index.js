@@ -19,3 +19,4 @@ export {
 };
 
 export * from "./scroll";
+export * from "./Tags";

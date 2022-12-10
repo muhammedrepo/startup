@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { images, socialIcon } from "../../constants";
+import { socialIcon } from "../../constants";
 import { footerLinks } from "./data";
 import { ReactComponent as FooterImage } from "../../images/footer/footerImage.svg";
 import { ReactComponent as FooterImageTwo } from "../../images/footer/footerImage2.svg";
+import { logo, logoWhite } from "../../images";
 
 const Footer = () => {
   return (
@@ -12,8 +13,8 @@ const Footer = () => {
           <div className="w-full px-4 md:w-1/2 lg:w-1/3 xl:w-[41.666667%]">
             <div className="mb-16 max-w-[360px]">
               <a href="#home" className="mb-8 inline-block">
-                <img src={images.logoWhite} alt="logo" className="aj w-full" />
-                <img src={images.logo} alt="logo" className="hidden w-full" />
+                <img src={logoWhite} alt="logo" className="aj w-full" />
+                <img src={logo} alt="logo" className="hidden w-full" />
               </a>
               <p className="mb-9 text-base font-medium">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer

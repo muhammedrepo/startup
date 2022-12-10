@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SignIn = () => {
+export const SignIn = () => {
   return (
     <section className="relative z-10 mb-[120px] pt-[180px]">
       <div className="container mx-auto px-4">
@@ -273,5 +273,3 @@ const SignIn = () => {
     </section>
   );
 };
-
-export default SignIn;

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ScrollToTop } from "../../constants";
 
-const Error = () => {
+export const Error = () => {
   return (
     <>
       <ScrollToTop />
@@ -549,5 +549,3 @@ const Error = () => {
     </>
   );
 };
-
-export default Error;

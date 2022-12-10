@@ -1,9 +1,8 @@
-import React from "react";
 import { TopSection } from "../../components";
 import { ScrollToTop } from "../../constants";
 import Support from "../HomePage/Support";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <>
       <ScrollToTop />
@@ -12,5 +11,3 @@ const Contact = () => {
     </>
   );
 };
-
-export default Contact;

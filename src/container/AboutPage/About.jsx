@@ -1,4 +1,4 @@
-import { images } from "../../constants";
+import { ab1, ab2, mark } from "../../images";
 import { items, lists } from "./data";
 
 const About = () => {
@@ -40,7 +40,7 @@ const About = () => {
                           className="bg-main-bg/10 text-main-bg/100 mr-4 flex
                       h-7 w-7 flex-wrap  items-center justify-center rounded-md"
                         >
-                          <img src={images.mark} alt="mark" />
+                          <img src={mark} alt="mark" />
                         </span>
                         {list}
                       </p>
@@ -51,7 +51,7 @@ const About = () => {
               <div className="w-full px-4 lg:w-1/2">
                 <div className="text-center lg:text-right">
                   <img
-                    src={images.ab1}
+                    src={ab1}
                     alt="aboutImage"
                     className="mx-auto max-w-full lg:mr-0"
                   />
@@ -68,7 +68,7 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className=" mb-12 text-center lg:mb-0 lg:text-left">
                 <img
-                  src={images.ab2}
+                  src={ab2}
                   alt="aboutImage2"
                   className="mx-auto max-w-full lg:ml-0"
                 />

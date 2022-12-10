@@ -1,6 +1,5 @@
-import React from "react";
 import { SectionTitle } from "../../components";
-import { images } from "../../constants";
+import { play, shape, video, vidPic } from "../../images";
 
 const VidSection = () => {
   return (
@@ -18,7 +17,7 @@ const VidSection = () => {
             >
               <div className="relative items-center justify-center">
                 <img
-                  src={images.vidPic}
+                  src={vidPic}
                   alt="videoPic"
                   className="h-full w-full object-cover object-center"
                 />
@@ -29,7 +28,7 @@ const VidSection = () => {
                   "
                 >
                   <a
-                    href={`${images.video}`}
+                    href={`${video}`}
                     className="
                       text-main-bg flex
                       h-[70px] w-[70px] items-center justify-center
@@ -37,7 +36,7 @@ const VidSection = () => {
                       transition-all hover:bg-white/100
                     "
                   >
-                    <img src={images.play} alt="" />
+                    <img src={play} alt="" />
                   </a>
                 </div>
               </div>
@@ -46,7 +45,7 @@ const VidSection = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 -z-10">
-        <img src={images.shape} alt="shape" className="w-full" />
+        <img src={shape} alt="shape" className="w-full" />
       </div>
     </section>
   );

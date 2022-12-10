@@ -1,4 +1,6 @@
-import { brandImage } from "../constants/brandImage";
+import { b1, b2, b3, b4, b5 } from "../images";
+
+const brandImage = [b1, b2, b3, b4, b5];
 const PartnerBrands = () => {
   return (
     <section className="pt-16">
@@ -28,7 +30,7 @@ const PartnerBrands = () => {
                   2xl:max-w-[160px] 2xl:opacity-60
                 "
                 >
-                  <img src={brand.img} alt="" />
+                  <img src={brand} alt="" />
                 </a>
               ))}
             </div>

@@ -1,10 +1,10 @@
 import { SectionTitle } from "../../components";
-import { images } from "../../constants";
-import { testimonialsData } from "../../constants/testimonialsData";
+import { testimonialsData } from "../../constants";
+import { star } from "../../images";
 import { ReactComponent as TestimonialOne } from "../../images/svg/reviewOne.svg";
 import { ReactComponent as TestimonialTwo } from "../../images/svg/reviewTwo.svg";
 
-const stars = [images.star, images.star, images.star, images.star, images.star];
+const stars = [star, star, star, star, star];
 
 const Testimonials = () => {
   return (

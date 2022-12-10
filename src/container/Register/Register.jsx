@@ -9,7 +9,7 @@ const initialState = {
   password: "",
   isMemeber: true,
 };
-const Register = () => {
+export const Register = () => {
   const [values, setValues] = useState(initialState);
   // global state and useNavigate
   const { isLoading, showAlert, displayAlert } = useAppContext();
@@ -350,5 +350,3 @@ const Register = () => {
     </>
   );
 };
-
-export default Register;

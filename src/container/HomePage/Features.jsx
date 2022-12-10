@@ -1,5 +1,5 @@
 import { SectionTitle } from "../../components";
-import { features } from "../../constants/featuresData";
+import { features } from "../../constants";
 
 const Features = () => {
   return (

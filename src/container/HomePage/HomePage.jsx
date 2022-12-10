@@ -8,7 +8,7 @@ import Testimonials from "./Testimonials";
 import Support from "./Support";
 import { PartnerBrands } from "../../components";
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <>
       <Hero />
@@ -23,5 +23,3 @@ const HomePage = () => {
     </>
   );
 };
-
-export default HomePage;

@@ -1,7 +1,7 @@
 import { TopSection } from "../../components";
 import About from "./About";
 
-const AboutPage = () => {
+export const AboutPage = () => {
   return (
     <>
       <TopSection title="About Page" subtitle="About page" />
@@ -9,5 +9,3 @@ const AboutPage = () => {
     </>
   );
 };
-
-export default AboutPage;

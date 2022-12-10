@@ -2,7 +2,7 @@ import React from "react";
 
 const pagination = ["Prev", "1", "2", "3", "...", "12", "Next"];
 
-const Pagination = () => {
+export const Pagination = () => {
   return (
     <div className="-mx-4 flex flex-wrap">
       <div className="w-full px-4">
@@ -24,5 +24,3 @@ const Pagination = () => {
     </div>
   );
 };
-
-export default Pagination;

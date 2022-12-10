@@ -101,30 +101,6 @@
      hover:shadow;
   }
 
-  /* Blog Styles */
-
-  .blog-detail-list {
-    @apply mb-2 text-base
-      font-medium
-      sm:text-lg
-      lg:text-base
-      xl:text-lg;
-  }
-
-  .blog-detail-tag,
-  .blog-detail-social {
-    @apply bg-main-bg/10
-      hover:bg-main-bg/100
-      text-gray
-      fill-gray
-      mr-4
-      inline-flex
-      items-center
-      justify-center
-      rounded-md
-      px-4 py-2;
-  }
-
   /* Form Styles */
 
   .name-label,
@@ -143,6 +119,12 @@
     py-3 px-5                  
   text-base font-medium outline outline-2 outline-offset-2 outline-transparent;
   }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 .alert-danger {
