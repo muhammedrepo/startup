@@ -1,11 +1,44 @@
-import { Link } from "react-router-dom";
-import { socialIcon } from "../../constants";
-import { footerLinks } from "./data";
-import { ReactComponent as FooterImage } from "../../images/footer/footerImage.svg";
-import { ReactComponent as FooterImageTwo } from "../../images/footer/footerImage2.svg";
-import { logo, logoWhite } from "../../images";
+import { Link } from 'react-router-dom';
+import { socialIcon } from '../../constants';
+import { footerLinks } from './data';
+import { ReactComponent as FooterImage } from '../../images/footer/footerImage.svg';
+import { ReactComponent as FooterImageTwo } from '../../images/footer/footerImage2.svg';
+import { logo, logoWhite } from '../../images';
 
 const Footer = () => {
+  const renderedSocialLinks = socialIcon.map((item, index) => (
+    <Link
+      key={index}
+      to={item.path}
+      aria-label="social-link"
+      className="fill-light-blue hover:fill-main-bg mr-6"
+    >
+      {item.icon}
+    </Link>
+  ));
+
+  const renderedFooterLinks = footerLinks.map((footerLink) => (
+    <div className="xs:my-0 my-4 flex min-w-[150px] flex-col">
+      <div className="mb-16">
+        <h2 className="mb-10 text-xl font-bold text-white">
+          {footerLink.title}
+        </h2>
+        <ul>
+          {footerLink.links.map((link) => (
+            <li>
+              <a
+                href={link.url}
+                className="text-gray hover:text-main-bg mb-4 inline-block text-base  font-medium"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ));
+
   return (
     <footer className="bg-main-bg/5 relative z-10 pt-[100px]">
       <div className="container">
@@ -20,43 +53,12 @@ const Footer = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 lobortis.
               </p>
-              <div className="flex items-center">
-                {socialIcon.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    aria-label="social-link"
-                    className="fill-light-blue hover:fill-main-bg mr-6"
-                  >
-                    {item.icon}
-                  </Link>
-                ))}
-              </div>
+              <div className="flex items-center">{renderedSocialLinks}</div>
             </div>
           </div>
 
           <div className="flex w-full flex-[1.5] flex-row flex-wrap justify-between">
-            {footerLinks.map((footerLink) => (
-              <div className="xs:my-0 my-4 flex min-w-[150px] flex-col">
-                <div className="mb-16">
-                  <h2 className="mb-10 text-xl font-bold text-white">
-                    {footerLink.title}
-                  </h2>
-                  <ul>
-                    {footerLink.links.map((link) => (
-                      <li>
-                        <a
-                          href={link.url}
-                          className="text-gray hover:text-main-bg mb-4 inline-block text-base  font-medium"
-                        >
-                          {link.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+            {renderedFooterLinks}
           </div>
         </div>
       </div>

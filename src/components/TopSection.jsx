@@ -1,5 +1,5 @@
-import React from "react";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import React from 'react';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 const TopSection = ({ title, subtitle }) => {
   return (
@@ -8,25 +8,10 @@ const TopSection = ({ title, subtitle }) => {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 md:w-2/3 lg:w-[58.333333%]">
             <div className="mb-3 max-w-[570px] md:mb-0">
-              <h1
-                className="
-                  a1A sm:a1O
-                  mb-5
-                  text-2xl
-                  font-bold
-                  dark:text-white
-                "
-              >
+              <h1 className="sm:a1O mb-5 text-2xl font-bold dark:text-white">
                 {title}
               </h1>
-              <p
-                className="
-                  a1U
-                  text-base
-                  font-medium
-                  text-[#959cb1]
-                "
-              >
+              <p className="text-base font-medium text-[#959cb1]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 varius eros eget sapien consectetur ultrices. Ut quis dapibus
                 libero.
@@ -47,15 +32,7 @@ const TopSection = ({ title, subtitle }) => {
                     Home
                   </a>
 
-                  <MdOutlineKeyboardArrowRight
-                    className="
-                      mr-3
-                      block
-                      h-6              
-                      w-6
-                      text-[#959cb1]
-                    "
-                  />
+                  <MdOutlineKeyboardArrowRight className="w-6text-[#959cb1] mr-3 block h-6" />
                 </li>
                 <li className="text-base font-medium text-[#4a6cf7]">
                   {subtitle}

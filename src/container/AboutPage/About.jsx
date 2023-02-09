@@ -1,7 +1,33 @@
-import { ab1, ab2, mark } from "../../images";
-import { items, lists } from "./data";
+import { ab1, ab2, mark } from '../../images';
+import { features, lists } from './data';
 
 const About = () => {
+  const renderedLists = lists.map((list, index) => (
+    <p
+      key={index}
+      className="mb-5 flex w-full items-center
+      px-3 text-lg font-medium sm:w-1/2 lg:w-full xl:w-1/2
+      "
+    >
+      <span
+        className="bg-main-bg/10 text-main-bg/100 mr-4 flex
+    h-7 w-7 flex-wrap  items-center justify-center rounded-md"
+      >
+        <img src={mark} alt="mark" />
+      </span>
+      {list}
+    </p>
+  ));
+
+  const renderedFeatures = features.map((feature) => (
+    <div key={feature.id} className="mb-9">
+      <h3 className="mb-4 text-xl font-bold sm:text-2xl xl:text-2xl">
+        {feature.title}
+      </h3>
+      <p className=" text-base font-medium sm:text-lg">{feature.desc}</p>
+    </div>
+  ));
+
   return (
     <>
       <section id="about" className="pt-[120px]">
@@ -28,24 +54,7 @@ const About = () => {
                     to best protect highly vulnerable business applications with
                     interactive panel discussions and roundtables.
                   </p>
-                  <div className="-mx-3 flex flex-wrap">
-                    {lists.map((list, index) => (
-                      <p
-                        key={index}
-                        className="mb-5 flex w-full items-center
-                        px-3 text-lg font-medium sm:w-1/2 lg:w-full xl:w-1/2
-                        "
-                      >
-                        <span
-                          className="bg-main-bg/10 text-main-bg/100 mr-4 flex
-                      h-7 w-7 flex-wrap  items-center justify-center rounded-md"
-                        >
-                          <img src={mark} alt="mark" />
-                        </span>
-                        {list}
-                      </p>
-                    ))}
-                  </div>
+                  <div className="-mx-3 flex flex-wrap">{renderedLists}</div>
                 </div>
               </div>
               <div className="w-full px-4 lg:w-1/2">
@@ -75,18 +84,7 @@ const About = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2">
-              <div className="max-w-[470px]">
-                {items.map((item) => (
-                  <div key={item.id} className="mb-9">
-                    <h3 className="mb-4 text-xl font-bold sm:text-2xl xl:text-2xl">
-                      {item.title}
-                    </h3>
-                    <p className=" text-base font-medium sm:text-lg">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <div className="max-w-[470px]">{renderedFeatures}</div>
             </div>
           </div>
         </div>
