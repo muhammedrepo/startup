@@ -1,25 +1,35 @@
-import { socialIcon } from "../../../constants";
-import { ReactComponent as BlogSidebarImage } from "../../../images/blogSidebar/blogSidebar.svg";
-import { ReactComponent as BlogSidebarImage2 } from "../../../images/blogSidebar/blogSidebar.svg";
-import { Tags } from "../../../components";
-import items from "../../../components/Tags/tagLists";
-import { Link } from "react-router-dom";
-import { BlogReport } from "../components";
-import { author2, blogDetail } from "../../../images";
+import { socialIcon } from '../../../constants';
+import { ReactComponent as BlogSidebarImage } from '../../../images/blogSidebar/blogSidebar.svg';
+import { ReactComponent as BlogSidebarImage2 } from '../../../images/blogSidebar/blogSidebar.svg';
+import { Tags } from '../../../components';
+import items from '../../../components/Tags/tagLists';
+import { Link } from 'react-router-dom';
+import { BlogReport } from '../components';
+import { author2, blogDetail } from '../../../images';
 
 const lists = [
-  "Consectetur adipiscing elit in voluptate velit.",
+  'Consectetur adipiscing elit in voluptate velit.',
 
-  "Mattis vulputate cupidatat.",
+  'Mattis vulputate cupidatat.',
 
-  "Vulputate enim nulla aliquet porttitor odio pellentesque",
+  'Vulputate enim nulla aliquet porttitor odio pellentesque',
 
-  "Ligula ullamcorper malesuada proin",
+  'Ligula ullamcorper malesuada proin',
 ];
 
 export const BlogDetail = () => {
   const listToDisplay = socialIcon.slice(0, 3);
   const tagToDisplay = items.slice(0, 3);
+
+  const renderedLists = lists.map((list, index) => (
+    <li
+      key={index}
+      className="mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg"
+    >
+      {list}
+    </li>
+  ));
+
   return (
     <div className="w-full px-4 lg:w-2/3">
       <div>
@@ -33,16 +43,7 @@ export const BlogDetail = () => {
         >
           <div className="flex flex-wrap items-center">
             <div className="mr-10 mb-5 flex items-center">
-              <div
-                className="
-                          mr-4
-                          h-[40px]
-                          w-full
-                          max-w-[40px]
-                          overflow-hidden
-                          rounded-full
-                        "
-              >
+              <div className="mr-4 h-[40px] w-full max-w-[40px] overflow-hidden rounded-full">
                 <img src={author2} alt="author" className="w-full" />
               </div>
               <div className="w-full">
@@ -59,31 +60,16 @@ export const BlogDetail = () => {
           <div className="mb-5">
             <span
               className="
-                        bg-main-bg
-                        inline-flex
-                        items-center
-                        justify-center
-                        overflow-hidden
-                        rounded-full
-                        py-2
-                        px-4
-                        text-sm
-                        text-white
-                      "
+                        bg-main-bg inline-flex items-center
+                        justify-center overflow-hidden rounded-full
+                        py-2 px-4 text-sm text-white"
             >
               Design
             </span>
           </div>
         </div>
         <div>
-          <p
-            className="mb-10 text-base
-                      font-medium
-                      sm:text-lg
-                      lg:text-base
-                       xl:text-lg
-                    "
-          >
+          <p className="mb-10 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occpx-4cat
             cupidatat.
@@ -95,14 +81,7 @@ export const BlogDetail = () => {
               className="h-full w-full object-cover object-center"
             />
           </div>
-          <p
-            className=" mb-8 text-base
-                      font-medium
-                      sm:text-lg
-                      lg:text-base
-                       xl:text-lg
-                    "
-          >
+          <p className=" mb-8 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             enim lobortis scelerisque fermentum. Neque sodales ut etiam sit
@@ -115,8 +94,8 @@ export const BlogDetail = () => {
           <p className="mb-10 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
             Semper auctor neque vitpx-4 tempus quam pellentesque nec.
             <span className="text-white underline">
-              {" "}
-              Amet dictum sit amet justo{" "}
+              {' '}
+              Amet dictum sit amet justo{' '}
             </span>
             donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet
             porttitor. Odio pellentesque diam volutpat commodo sed.
@@ -130,14 +109,7 @@ export const BlogDetail = () => {
             cupidatat.
           </p>
           <ul className=" text-gray mb-10 list-inside list-disc">
-            {lists.map((list, index) => (
-              <li
-                key={index}
-                className="mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg"
-              >
-                {list}
-              </li>
-            ))}
+            {renderedLists}
           </ul>
           <div
             className=" bg-main-bg/10 relative z-10  mb-10 flex-wrap overflow-hidden
